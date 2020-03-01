@@ -7,4 +7,5 @@ nav:
     - Links: links.md
     - Help: Help.md
 
-theme: readthedocs
+# uncomment under line to use the "readthedocs" theme
+# theme: readthedocs
