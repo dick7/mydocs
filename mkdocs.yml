@@ -3,7 +3,7 @@ site_name: Hello MkDocs
 nav:
     - Home: index.md
     - About: about.md
-    - Img: img.md
+    - Imgs: imgs.md
     - Links: links.md
     - Help: Help.md
 
