@@ -46,7 +46,7 @@ Install Python by downloading an installer appropriate for your system from pyth
 
 If you are installing Python on Windows, be sure to check the box to have Python added to your PATH if the installer offers such an option (it's normally off by default).
 
-*Add Python to PATH*
+#### Add Python to PATH
 #### Installing pip
 
 If you're using a recent version of Python, the Python package manager, pip, is most likely installed by default. However, you may need to upgrade pip to the lasted version:

@@ -3,5 +3,7 @@ site_name: Hello MkDocs
 nav:
     - Home: index.md
     - About: about.md
+    - Help: Help.md
+    - Readme: README.md
 
 theme: readthedocs
