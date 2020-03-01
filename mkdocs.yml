@@ -4,6 +4,7 @@ nav:
     - Home: index.md
     - About: about.md
     - Img: img.md
+    - Links: links.md
     - Help: Help.md
 
 theme: readthedocs
