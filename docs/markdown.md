@@ -32,7 +32,9 @@
 > This is a quote.
 > It can span multiple lines!
 ```
-## Images   Need to upload an image? Imgur has a great interface.
+## Images   
+
+Need to upload an image? [SimpleMDE](https://simplemde.com/) has a great interface.
 ```
 ![](http://www.example.com/image.jpg)
 ```
