@@ -2,11 +2,22 @@ site_name: Hello MkDocs
 
 nav:
     - Home: index.md
-    - Git/Github: git.md
+    - MkDocs: Help.md
     - Markdown: markdown.md
     - Imgs: imgs.md
     - Links: links.md
-    - Help: Help.md
+    - SSH: ssh.md
+    - Git/Github: git.md
+    - Vi/Vim: vim.md
+    - Linux/Shell: linux-shell.md
+    - Nginx: nginx.md
+    - MySQL: mysql.md
+    - Mongo: mongo.md
+    - Python: python.md
+    - Django: django.md
+    - Flask: flask.md
 
 # uncomment under line to use the "readthedocs" theme
-# theme: readthedocs
+theme: readthedocs
+
+
