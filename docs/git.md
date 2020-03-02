@@ -83,9 +83,9 @@ Checking connectivity... done.
 
 宝塔面板插件webhook脚本文件 **BUG** 解决方案：
 
------------------------------------------------
+###############################################
 - ** 用指定参数 "$PARAM" 代替传入参数 "$1" ** -
------------------------------------------------
+###############################################
 
 * test-webhook.sh 
 ```
@@ -148,15 +148,17 @@ http://IP:8888/hook?access_key=***bTk&param=mydocs
 ```
 
 - Content type
-~~default~~
+
+    ~~default~~
 
 - Secret
-~~default NULL~~
+
+    ~~default NULL~~
 
 - Which events would you like to trigger this webhook?
-> *   Just the push event. ~~default~~
->     Send me everything.
->     Let me select individual events.
+  > √   Just the push event. ~~default~~
+  >     Send me everything.
+  >     Let me select individual events.
 
 - Active
 
@@ -169,5 +171,5 @@ Recent Deliveries
 
 |**Request**|**Response**|
 |-------|--------|
-|Request URL: http://IP:8888/hook?access_key=***Hh5&param=mydocs    | {"code": 1}  |
+|URL: http://IP:8888/hook?access_key=***&param=mydocs| {"code": 1}  |
 |...|...|
