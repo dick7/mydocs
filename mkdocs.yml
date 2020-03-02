@@ -17,6 +17,7 @@ nav:
     - Python: python.md
     - Django: django.md
     - Flask: flask.md
+    - Cheat-Sheets: cheat-sheets.md
 
 ## add plugins
 # plugins:
