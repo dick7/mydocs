@@ -83,21 +83,24 @@ Checking connectivity... done.
 
 宝塔面板插件webhook脚本文件 **BUG** 解决方案：
 
-*** 用指定参数 `$PARAM` 代替传入参数 `$1` ***
+*** 先用指定参数 `$PARAM` 代替传入参数 `$1` ，然后再换回`$1`***
 
 * test-webhook.sh 
 ```
 #!/bin/bash
 
-echo "Let's test webhook!"
-
+echo "Some ('push') event(s) makes webhook start!"
+echo "-------------------Start-------------------"
 date --date='0 days ago' "+%Y-%m-%d %H:%M:%S"
 
-PARAM=mydocs
+# PARAM=mydocs
+PARAM=$1
+echo "Use '$PARAM' instead of passing by param '$1'"
 
 if [ ! -n "$PARAM" ];
 then
-    echo "'$PARAM' is NULL!No param come in!"
+    echo "$PARAM is NULL!No param come in!"
+    echo "--------------------End--------------------"
     exit
 fi
 
@@ -107,29 +110,29 @@ gitRemote="https://github.com/dick7/$PARAM.git"
 echo "gitLocal: $gitLocal"
 echo "gitRemote: $gitRemote"
 
-if [ -d "$gitPath"  ];
+if [ -d "$gitLocal"  ];
 then
-    cd $gitPath
-    echo "判断是否存在git目录"
+    echo "$gitLocal EXISTs！"
+    cd $gitLocal
     if [ ! -d ".git"  ]; then
-        echo "在该目录下克隆 git"
-        git clone $gitHttp gittemp
-        echo "git clone to 'gittemp' completed!"
+        echo "$gitLocal dir does NOT contain '.git'!Needs 'git clone ...'"
+        git clone $gitRemote gittemp
+        echo "git clone completed!"
         echo "mv gittemp/.git ."
         mv gittemp/.git .
         echo "rm -rf gittemp"
         rm -rf gittemp
     fi
-    echo "拉取最新的项目文件"
+    echo "'git pull ...' from $gitRemote."
     #git reset --hard origin/master
     git pull
-    echo "设置目录权限'www:www'"
-    chown -R www:www $gitPath
-    echo "End"
+    echo "change $gitLocal own rights to 'www:www'"
+    chown -R www:www $gitLocal
+    echo "--------------------End--------------------"
     exit
 else
-    echo "该项目路径不存在"
-    echo "End"
+    echo "$gitLocal does NOT EXIST!"
+    echo "--------------------End--------------------"
     exit
 fi
 ```
