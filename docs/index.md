@@ -17,6 +17,7 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
         ...       # Other markdown pages, images and other files.
 
 ## Tree 
+```
 .
 ├── README.md
 ├── docs
@@ -44,3 +45,5 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 └── mkdocs.yml
 
 3 directories, 21 files
+```
+
