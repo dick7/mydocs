@@ -78,3 +78,94 @@ Checking connectivity... done.
 192.168.45.4 为 Git 所在服务器 ip ，你需要将其修改为你自己的 Git 服务 ip。
 
 这样我们的 Git 服务器安装就完成。
+
+## 4.webhook on [github](github.com)
+
+宝塔面板插件webhook脚本文件：
+
+* test-webhook.sh 
+```
+#!/bin/bash
+
+echo "Let's test webhook!"
+
+date --date='0 days ago' "+%Y-%m-%d %H:%M:%S"
+
+PARAM=mydocs
+
+if [ ! -n "$PARAM" ];
+then
+    echo "'$PARAM' is NULL!No param come in!"
+    exit
+fi
+
+gitLocal="/www/wwwroot/$PARAM"
+gitRemote="https://github.com/dick7/$PARAM.git"
+
+echo "gitLocal: $gitLocal"
+echo "gitRemote: $gitRemote"
+
+if [ -d "$gitPath"  ];
+then
+    cd $gitPath
+    echo "判断是否存在git目录"
+    if [ ! -d ".git"  ]; then
+        echo "在该目录下克隆 git"
+        git clone $gitHttp gittemp
+        echo "git clone to 'gittemp' completed!"
+        echo "mv gittemp/.git ."
+        mv gittemp/.git .
+        echo "rm -rf gittemp"
+        rm -rf gittemp
+    fi
+    echo "拉取最新的项目文件"
+    #git reset --hard origin/master
+    git pull
+    echo "设置目录权限'www:www'"
+    chown -R www:www $gitPath
+    echo "End"
+    exit
+else
+    echo "该项目路径不存在"
+    echo "End"
+    exit
+fi
+```
+
+### github webhook config and test
+
+- Webhooks / Manage webhook
+
+We’ll send a POST request to the URL below with details of any subscribed events. You can also specify which data format you’d like to receive (JSON, x-www-form-urlencoded, etc). More information can be found in our developer documentation.
+
+- Payload URL
+```
+
+```
+
+- Content type
+```
+
+```
+- Secret
+```
+
+```
+
+- Which events would you like to trigger this webhook?
+> *   Just the push event.
+>     Send me everything.
+>     Let me select individual events.
+
+- Active
+
+We will deliver event details when this hook is triggered.
+Recent Deliveries
+
+- Recent Deliveries
+
+    e3125208-5c62-11ea-8fe3-094f6a057ebd
+
+|Request|Response|
+|-------|--------|
+|...    | ...    |
