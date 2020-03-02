@@ -146,7 +146,7 @@ Save your changes and you'll now see a navigation bar with Home and About items 
 
 Try the menu items and navigate back and forth between pages. Then click on Search. A search dialog will appear, allowing you to search for any text on any page. Notice that the search results include every occurrence of the search term on the site and links directly to the section of the page in which the search term appears. You get all of that with no effort or configuration on your part!
 
-Screenshot
+[Screenshot]()
 
 ### Theming our documentation
 
@@ -165,12 +165,13 @@ Screenshot
 Changing the Favicon Icon
 
 By default, MkDocs uses the MkDocs favicon icon. To use a different icon, create an img subdirectory in your docs_dir and copy your custom favicon.ico file to that directory. MkDocs will automatically detect and use that file as your favicon icon.
-Building the site
+
+### Building the site
 
 That's looking good. You're ready to deploy the first pass of your MkLorum documentation. First build the documentation:
-
-### mkdocs build
-
+```
+mkdocs build
+```
 This will create a new directory, named site. Take a look inside the directory:
 ```
 $ ls site

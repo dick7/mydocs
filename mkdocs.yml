@@ -1,8 +1,8 @@
-site_name: Hello MkDocs
+site_name: mydocs-MkDocs
 
 nav:
     - Home: index.md
-    - MkDocs: Help.md
+    - MkDocs: mkdocs.md
     - Markdown: markdown.md
     - Imgs: imgs.md
     - Links: links.md
@@ -11,11 +11,15 @@ nav:
     - Vi/Vim: vim.md
     - Linux/Shell: linux-shell.md
     - Nginx: nginx.md
-    - MySQL: mysql.md
-    - Mongo: mongo.md
+    - Databases:
+        - MySQL: mysql.md
+        - Mongo: mongo.md
     - Python: python.md
     - Django: django.md
     - Flask: flask.md
+
+plugins:
+    - 
 
 # uncomment under line to use the "readthedocs" theme
 theme: readthedocs
