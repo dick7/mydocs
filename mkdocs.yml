@@ -1,7 +1,7 @@
 site_name: mydocs-MkDocs
 
 nav:
-    - Home: home.md
+    - Home: index.md
     - MkDocs: mkdocs.md
     - Markdown: markdown.md
     - Imgs: imgs.md
