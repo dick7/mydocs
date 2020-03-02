@@ -27,13 +27,13 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 │   ├── django.md
 │   ├── flask.md
 │   ├── git.md
-│   ├── home.md
 │   ├── imgs
 │   │   ├── favicon.ico
 │   │   ├── ico-head.jpg
 │   │   ├── vi-vim-cheat-sheet-sch.gif
 │   │   └── vim-vi-workmodel.png
 │   ├── imgs.md
+│   ├── index.md
 │   ├── links.md
 │   ├── linux-shell.md
 │   ├── markdown.md
@@ -46,4 +46,3 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
 3 directories, 21 files
 ```
-
