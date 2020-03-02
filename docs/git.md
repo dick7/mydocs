@@ -147,17 +147,17 @@ http://IP:8888/hook?access_key=***bTk&param=mydocs
 
 - Content type
 
-    ~default~
+~~default~~
 
 - Secret
 
-    ~default NULL~
+~~default NULL~~
 
 - Which events would you like to trigger this webhook?
 
-    >  Just the push event. ~default~
-    >  Send me everything.
-    >  Let me select individual events.
+>  Just the push event. ~~default~~
+>  Send me everything.
+>  Let me select individual events.
 
 - Active
 

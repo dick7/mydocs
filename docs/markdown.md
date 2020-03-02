@@ -1,10 +1,10 @@
-# Markdown Guide
+# [Markdown Guide](https://simplemde.com/markdown-guide)
 
 ## Emphasis
 ```
 **bold**
 *italics*
-~strikethrough~~
+~~strikethrough~~
 ```
 ## Headers
 ```
