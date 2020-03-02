@@ -12,8 +12,8 @@ nav:
     - Linux/Shell: linux-shell.md
     - Nginx: nginx.md
     - Databases:
-        - MySQL: /dbs/mysql.md
-        - Mongo: /dbs/mongo.md
+        - MySQL: dbs/mysql.md
+        - Mongo: dbs/mongo.md
     - Python: python.md
     - Django: django.md
     - Flask: flask.md
