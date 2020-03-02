@@ -81,7 +81,11 @@ Checking connectivity... done.
 
 ## 4.webhook on [github](https://github.com/dick7/mydocs)
 
-宝塔面板插件webhook脚本文件：
+宝塔面板插件webhook脚本文件 **BUG** 解决方案：
+
+-----------------------------------------------
+- ** 用指定参数 "$PARAM" 代替传入参数 "$1" ** -
+-----------------------------------------------
 
 * test-webhook.sh 
 ```
