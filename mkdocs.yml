@@ -18,8 +18,9 @@ nav:
     - Django: django.md
     - Flask: flask.md
 
-plugins:
-    - 
+## add plugins
+# plugins:
+#   - 
 
 # uncomment under line to use the "readthedocs" theme
 theme: readthedocs
