@@ -79,7 +79,7 @@ Checking connectivity... done.
 
 这样我们的 Git 服务器安装就完成。
 
-## 4.webhook on [github](github.com)
+## 4.webhook on [github](https://github.com/dick7/mydocs)
 
 宝塔面板插件webhook脚本文件：
 
@@ -144,13 +144,10 @@ http://IP:8888/hook?access_key=***bTk&param=mydocs
 ```
 
 - Content type
-```
 ~~default~~
-```
+
 - Secret
-```
 ~~default NULL~~
-```
 
 - Which events would you like to trigger this webhook?
 > *   Just the push event. ~~default~~
@@ -166,7 +163,7 @@ Recent Deliveries
 
     e3125208-5c62-11ea-8fe3-094f6a057ebd
 
-**|Request|Response|**
+|**Request**|**Response**|
 |-------|--------|
 |Request URL: http://IP:8888/hook?access_key=***Hh5&param=mydocs    | {"code": 1}  |
 |...|...|
