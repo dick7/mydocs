@@ -18,6 +18,9 @@ nav:
     - Django: django.md
     - Flask: flask.md
     - Cheat-Sheets: cheat-sheets.md
+    - Diary-2020-3: 
+        - Test: diaries/0.md
+        - First: diaries/20200303.md
 
 ## add plugins
 # plugins:
