@@ -4,6 +4,7 @@ nav:
     - Home: index.md
     - MkDocs: mkdocs.md
     - Markdown: markdown.md
+    - Fields: fields.md
     - Imgs: imgs.md
     - Links: links.md
     - SSH: ssh.md
