@@ -21,7 +21,8 @@ nav:
     - Cheat-Sheets: cheat-sheets.md
     - Diary-2020-3: 
         - Test: diaries/0.md
-        - First: diaries/20200303.md
+        - First day: diaries/20200303.md
+        - Second day: diaries/4.md
 
 ## add plugins
 # plugins:

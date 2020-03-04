@@ -13,13 +13,15 @@ git config --global push.default simple
 ## 2.git basic operations
 ```
 # git clone https://github.com/dick7/mydocs.git
-git init /git pull
+git init 
+# git reset --hard origin/master
 # git branch --set-upstream-to=origin/master
-git branch --set-upstream-to=origin/dev
+# git branch --set-upstream-to=origin/dev
 git add .
 git commit -m '1st upload to github'
 git remote add origin dev https://github.com/dick7/mydocs.git
-git push -u origin dev
+git pull [--rebase]
+git push [-u origin dev]
 ```
 
 ## 3.git server
@@ -162,7 +164,13 @@ http://IP:8888/hook?access_key=***bTk&param=mydocs
 >  Send me everything.
 >  Let me select individual events.
 
-- Active
+- **Active**
+
+    When activated, the `github.com` will give a message below:
+    ```
+    Okay, that hook was successfully created. We sent a ping payload to test it out! Read more about it at https://developer.github.com/webhooks/#ping-event.
+    ```
+    , stands for setting ok and completed.
 
 We will deliver event details when this hook is triggered.
 Recent Deliveries
