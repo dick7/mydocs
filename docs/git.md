@@ -95,9 +95,12 @@ echo "Some ('push') event(s) makes webhook start!"
 echo "-------------------Start-------------------"
 date --date='0 days ago' "+%Y-%m-%d %H:%M:%S"
 
+echo "Use '$PARAM' instead of passing by param '$1'"
 # PARAM=mydocs
 PARAM=$1
-echo "Use '$PARAM' instead of passing by param '$1'"
+# CD=/www/wwwroot/new-realm.cn/test/
+CD=/www/wwwroot/new-realm.cn/test/
+echo "The ONLY parameter you need to change is the $CD you will to clone into."
 
 if [ ! -n "$PARAM" ];
 then
@@ -106,7 +109,7 @@ then
     exit
 fi
 
-gitLocal="/www/wwwroot/$PARAM"
+gitLocal="$CD/$PARAM"
 gitRemote="https://github.com/dick7/$PARAM.git"
 
 echo "gitLocal: $gitLocal"
@@ -183,3 +186,4 @@ Recent Deliveries
 |-------|--------|
 |URL: http://IP:8888/hook?access_key=***&param=mydocs| {"code": 1}  |
 |...|...|
+
