@@ -19,9 +19,9 @@ git init
 # git branch --set-upstream-to=origin/dev
 git add .
 git commit -m '1st upload to github'
-git remote add origin dev https://github.com/dick7/mydocs.git
+git remote add origin https://github.com/dick7/mydocs.git
 git pull [--rebase]
-git push [-u origin dev]
+git push [-f -u origin dev]
 ```
 
 ## 3.git server
