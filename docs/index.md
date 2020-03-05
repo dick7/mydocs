@@ -1,6 +1,10 @@
-# Welcome to MkDocs
+# Welcome to mydocs
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+> mydocs made by python [MkDocs](http://doc.ztloadfield.com:8500/mkdocs/)
+
+- Source: *[mydocs](https://github.com/dick7/mydocs)*
+- Site: [http://doc.ztloadfield.com/](http://doc.ztloadfield.com:8500)
+
 
 ## Commands
 
@@ -16,33 +20,45 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
 
-## Tree 
-```
-.
-├── README.md
-├── docs
-│   ├── dbs
-│   │   ├── mongo.md
-│   │   └── mysql.md
-│   ├── django.md
-│   ├── flask.md
-│   ├── git.md
-│   ├── imgs
-│   │   ├── favicon.ico
-│   │   ├── ico-head.jpg
-│   │   ├── vi-vim-cheat-sheet-sch.gif
-│   │   └── vim-vi-workmodel.png
-│   ├── imgs.md
-│   ├── index.md
-│   ├── links.md
-│   ├── linux-shell.md
-│   ├── markdown.md
-│   ├── mkdocs.md
-│   ├── nginx.md
-│   ├── python.md
-│   ├── ssh.md
-│   └── vim.md
-└── mkdocs.yml
+## Now layout Tree
 
-3 directories, 21 files
+By run bash:
+
+`cat mkdocs.yml >> docs/index.md`
+
+
 ```
+site_name: mydocs-MkDocs
+
+nav:
+    - Home: index.md
+    - MkDocs: mkdocs.md
+    - Markdown: markdown.md
+    - Fields: fields.md
+    - Imgs: imgs.md
+    - Links: links.md
+    - SSH: ssh.md
+    - Git/Github: git.md
+    - Vi/Vim: vim.md
+    - Linux/Shell: linux-shell.md
+    - Nginx: nginx.md
+    - Databases:
+        - MySQL: dbs/mysql.md
+        - Mongo: dbs/mongo.md
+    - Python: python.md
+    - Django: django.md
+    - Flask: flask.md
+    - Cheat-Sheets: cheat-sheets.md
+    - Diary-2020-3: 
+        - Test: diaries/0.md
+        - First day: diaries/20200303.md
+        - Second day: diaries/4.md
+
+## add plugins
+# plugins:
+#   - 
+
+# uncomment under line to use the "readthedocs" theme
+# theme: readthedocs
+```
+
