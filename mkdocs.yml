@@ -5,7 +5,11 @@ nav:
     - MkDocs: mkdocs.md
     - Markdown: markdown.md
     - Yaml: yaml.md
-    - Travis CI: travis.md 
+    - Travis CI: 
+      # - Intro: travis.md 
+      # - Use: travis-1.md
+      - travis.md 
+      - travis-1.md  
     - Fields: fields.md
     - Imgs: imgs.md
     - Links: links.md
