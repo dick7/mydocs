@@ -4,12 +4,15 @@ nav:
     - Home: index.md
     - MkDocs: mkdocs.md
     - Markdown: markdown.md
+    - Yaml: yaml.md
+    - Travis CI: travis.md 
     - Fields: fields.md
     - Imgs: imgs.md
     - Links: links.md
     - SSH: ssh.md
     - Git/Github: git.md
     - Vi/Vim: vim.md
+    - Apt/pip/yum: apt.md
     - Linux/Shell: linux-shell.md
     - Nginx: nginx.md
     - Databases:

@@ -191,3 +191,17 @@ Checking connectivity... done.
 这样我们的 Git 服务器安装就完成。
 
 
+venv/
+
+*.pyc
+__pycache__/
+
+instance/
+
+.pytest_cache/
+.coverage
+htmlcov/
+
+dist/
+build/
+*.egg-info/
