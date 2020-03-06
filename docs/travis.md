@@ -51,7 +51,7 @@ script:
 第二种加密方式则更为安全，实用性更广。通过travis encrypt命令来加密信息或文件。
 首先安装travis命令行客户端
 ```
-$ gem install travis
+$ apt install travis
 ```
 登录travis CI
 ```

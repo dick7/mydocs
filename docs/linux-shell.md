@@ -16,7 +16,9 @@ sed -i "s/1/PARAM/g" `grep "1" -rl ./test-webhook.sh`
 ```
 接下来使用一个更复杂实例，批量替换网址 baidu.com 为 ztloadfield.com：
 ```
-sed -i "s/https:\/\/baidu.com/https:\/\/ztloadfield.com\/g" `grep -rl "baidu.com" ./`
+sed -i "s/https:\/\/baidu.com/https:\/\/ztloadfield.com/g" `grep -rl "baidu.com" ./`
+----------------^-^-----------------^-^--------------------------------------------
+**注意：插入 '\'的位置，其他位置不变。**
 ```
 ### 参考命令
   -  Linux sed命令： http://www.runoob.com/linux/linux-comm-sed.html
