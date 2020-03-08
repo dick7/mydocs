@@ -113,3 +113,170 @@ else
     exit
 fi
 ```
+## 3.File Operation
+
+**Check File/Directory Mode(s) [Situation/ is Empity?/ is NULL]**
+
+### 3.1 if/for/test/array/case...esac/$#/string
+
+```
+#!/bin/bash
+
+# Generate test files
+# for (( i=0;i<5;i++ )); do touch tmp-$i.txt;done
+# for (( i=0;i<5;i++ )); do touch tmp-$i.txt; echo 'test'-$i >> tmp-$i.txt;done
+
+echo "Number of params=$#"
+echo -e "Run file=$0\nParam=$1"
+
+if [ 1 -gt $# ];then
+    echo "No param input!Only need one!"
+    exit
+fi
+
+if [ 1 -lt $# ];then
+    echo 'Too many params!Only need one!'
+    exit
+fi
+
+fm=( '-e' '-b' '-c' '-d' '-f' '-g' '-k' '-p' '-u' '-r' '-w' '-x' '-s' '-S' '-L')
+# echo ${fm[1]}
+# echo ${fm}
+# echo ${fm[*]}
+# echo ${#fm[@]}
+
+count=0
+ml=""
+for m in ${fm[*]}
+do
+    if [ ! -e $1 ];then
+        echo "$1 does NOT exist."
+        exit
+    fi
+    if [ $m $1 ];then
+        count=`expr $count + 1`
+        ml="$ml"' '"$m"
+        # echo "$1 has $m mode!"
+    fi
+done
+
+echo -e "ml=$ml\ncount=$count"
+
+if [[ ${#ml} -lt 1 || $count -eq 0 ]]; then
+    echo "$1 has spacial mode."
+    exit
+fi
+
+for m in ${ml[*]}
+do
+    case $m in
+        '-e') echo "-e : $1 exists."
+            # continue
+            ;;
+        '-d') echo "-d : $1 is DIR."
+            p=`ls -a $1`
+            if [ ${#p} -lt 5 ];then
+                echo -e "$1 is an empity DIR!But NOT a NULL DIR,it contains:\n[$p]!"
+            else
+                # ls -a $1
+                # echo $p
+                continue
+            fi
+            ;;
+        '-f') echo "-f : $1 is common file Nither DIR nor DEVICE."
+            p=`cat $1`
+            if [ ${#p} -eq 0 ];then
+                echo "$1 is NULL common file."
+            fi
+            # cat $1
+            ;;
+        '-s') echo "-s : $1 NOT NULL."
+            # cat $1
+            ;;
+        '-x') echo "-x : $1 is an EXEC RUN file."
+            ;;
+        '-r') echo "-r : $1 is Readable."
+            ;;
+        '-w') echo "-w : $1 is Writeable."
+            ;;
+        '-b'|'-c'|'-g'|'-k'|'-p'|'u') echo "'-b'|'-c'|'-g'|'-k'|'-p'|'u' : $1 is something else,such as BLOCKSET, CHARSET, SGID, Sticky Bit, Panel, SUID."
+            ;;
+        '-S') echo "-S : $1 is a Socket."
+            ;;
+        '-L') echo "-L : $1 is a Symbol Link."
+            ;;
+        *) echo "$1 does NOT exist, or is something unknown."
+            break
+            ;;
+    esac
+done
+```
+
+### 3.2 if/$#/-gt/-e.../||
+```
+#!/bin/bash
+
+
+# for (( i=0;i<5;i++ )); do touch tmp-$i.txt;done
+# for (( i=0;i<5;i++ )); do touch tmp-$i.txt; echo 'test'-$i >> tmp-$i.txt;done
+
+echo "$#"
+echo -e "$0 \n $1 \n $2"
+
+if [ 1 -gt $# ];then
+    echo "No param input!Only need one!"
+    exit
+
+fi
+
+if [ 1 -lt $# ];then
+    echo 'Too many params!Only need one!'
+    exit
+fi
+
+if [ -e $1 ];then
+    echo $1' exists!'
+else
+    echo $1' NOT exists!'
+    exit
+fi
+
+if [ -d $1 ];then
+    echo $1' is DIR.'
+    p=`ls -a $1`
+    if [ ${#p} -lt 5 ];then
+        echo $1' is NULL DIR!'
+    else
+        ls -a $1
+    fi
+    exit
+else
+    echo $1' is NOT DIR.'
+fi
+
+if [ -f $1 ];then
+    echo $1' is common file Nither DIR nor device.'
+    if [ -s $1 ];then
+        echo $1' NOT NULL.'
+        if [ -x $1 ];then
+            echo $1' is RUN file.'
+            exit
+        else
+            cat $1
+            exit
+        fi
+    else
+        echo $1' is NULL file.'
+        exit
+    fi
+else
+    if [[ -b $1 || -c $1 || -g $1 || -k $1 || -p $1 || -u $1 ]];then
+        echo $1' is something else.'
+        exit
+    fi
+    echo $1' is something unknown.'
+    exit
+fi
+
+```
+
