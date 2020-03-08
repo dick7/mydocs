@@ -17,7 +17,9 @@ nav:
     - Git/Github: git.md
     - Vi/Vim: vim.md
     - Apt/pip/yum: apt.md
-    - Linux/Shell: linux-shell.md
+    - Linux/Shell: 
+      - linux-cmds.md
+      - linux-shell.md
     - Nginx: nginx.md
     - Databases:
         - MySQL: dbs/mysql.md
@@ -37,5 +39,7 @@ nav:
 
 # uncomment under line to use the "readthedocs" theme
 # theme: readthedocs
+# `pip install material`
+# theme: material
 
 

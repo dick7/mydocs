@@ -12,6 +12,7 @@
 * `mkdocs serve` - Start the live-reloading docs server.
 * `mkdocs build` - Build the documentation site.
 * `mkdocs -h` - Print help message and exit.
+* `mkdocs gh-deploy` - [Deploy on github address](https://dick7.github.io/mydocs/).
 
 ## Project layout
 
@@ -34,13 +35,22 @@ nav:
     - Home: index.md
     - MkDocs: mkdocs.md
     - Markdown: markdown.md
+    - Yaml: yaml.md
+    - Travis CI: 
+      # - Intro: travis.md 
+      # - Use: travis-1.md
+      - travis.md 
+      - travis-1.md  
     - Fields: fields.md
     - Imgs: imgs.md
     - Links: links.md
     - SSH: ssh.md
     - Git/Github: git.md
     - Vi/Vim: vim.md
-    - Linux/Shell: linux-shell.md
+    - Apt/pip/yum: apt.md
+    - Linux/Shell: 
+      - linux-cmds.md
+      - linux-shell.md
     - Nginx: nginx.md
     - Databases:
         - MySQL: dbs/mysql.md
@@ -60,5 +70,9 @@ nav:
 
 # uncomment under line to use the "readthedocs" theme
 # theme: readthedocs
+# `pip install material`
+# theme: material
+
 ```
+
 

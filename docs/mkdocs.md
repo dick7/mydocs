@@ -197,6 +197,11 @@ mkdocs build --help
 ```
 ## Deploying
 
+```
+mkdocs gh-deploy
+```
+[Default deploying address](https://dick7.github.io/mydocs/)
+
 The documentation site that you just built only uses static files so you'll be able to host it from pretty much anywhere. GitHub project pages and Amazon S3 may be good hosting options, depending upon your needs. Upload the contents of the entire site directory to wherever you're hosting your website from and you're done. For specific instructions on a number of common hosts, see the Deploying your Docs page.
 Getting help
 
