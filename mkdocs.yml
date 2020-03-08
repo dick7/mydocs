@@ -83,11 +83,11 @@ theme:
     text: 'Ubuntu'
     code: 'Ubuntu Mono'
   logo: 'imgs/ico-head.jpg'
-  language: 'en,zh'
+  language: 'zh'
 
 extra:
   search:
-    language: 'en, zh'
+    language: 'en,zh'
   social:
     - type: 'github'
       link: 'https://github.com/dick7'
