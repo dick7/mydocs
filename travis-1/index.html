@@ -1,0 +1,1149 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>持续集成服务 Travis CI 使用教程 - mydocs-MkDocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#travis-ci" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="mydocs-MkDocs" aria-label="mydocs-MkDocs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              mydocs-MkDocs
+            </span>
+            <span class="md-header-nav__topic">
+              
+                持续集成服务 Travis CI 使用教程
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="mydocs-MkDocs" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    mydocs-MkDocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../mkdocs/" title="MkDocs" class="md-nav__link">
+      MkDocs
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../markdown/" title="Markdown" class="md-nav__link">
+      Markdown
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../yaml/" title="Yaml" class="md-nav__link">
+      Yaml
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      Travis CI
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Travis CI
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../travis/" title="Travis CI 持续集成" class="md-nav__link">
+      Travis CI 持续集成
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        持续集成服务 Travis CI 使用教程
+      </label>
+    
+    <a href="./" title="持续集成服务 Travis CI 使用教程" class="md-nav__link md-nav__link--active">
+      持续集成服务 Travis CI 使用教程
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    一、什么是持续集成？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    二、使用准备
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#travisyml" class="md-nav__link">
+    三、.travis.yml
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    四、运行流程
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-install" class="md-nav__link">
+    4.1 install 字段
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42script" class="md-nav__link">
+    4.2、script 字段
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-node" class="md-nav__link">
+    4.3 实例：Node 项目
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    4.4 部署
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45" class="md-nav__link">
+    4.5 钩子方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46" class="md-nav__link">
+    4.6 运行状态
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    五、使用技巧
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    5.1 环境变量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    5.2 加密信息
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    5.3 加密文件
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../fields/" title="Fields" class="md-nav__link">
+      Fields
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../imgs/" title="Imgs" class="md-nav__link">
+      Imgs
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../links/" title="Links" class="md-nav__link">
+      Links
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../ssh/" title="SSH" class="md-nav__link">
+      SSH
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../git/" title="Git/Github" class="md-nav__link">
+      Git/Github
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../vim/" title="Vi/Vim" class="md-nav__link">
+      Vi/Vim
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../apt/" title="Apt/pip/yum" class="md-nav__link">
+      Apt/pip/yum
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      Linux/Shell
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        Linux/Shell
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-cmds/" title="Linux 命令大全" class="md-nav__link">
+      Linux 命令大全
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-shell/" title="Linux" class="md-nav__link">
+      Linux
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../nginx/" title="Nginx" class="md-nav__link">
+      Nginx
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-15" type="checkbox" id="nav-15">
+    
+    <label class="md-nav__link" for="nav-15">
+      Databases
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-15">
+        Databases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dbs/mysql/" title="MySQL" class="md-nav__link">
+      MySQL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dbs/mongo/" title="Mongo" class="md-nav__link">
+      Mongo
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../python/" title="Python" class="md-nav__link">
+      Python
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../django/" title="Django" class="md-nav__link">
+      Django
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../flask/" title="Flask" class="md-nav__link">
+      Flask
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../cheat-sheets/" title="Cheat-Sheets" class="md-nav__link">
+      Cheat-Sheets
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-20" type="checkbox" id="nav-20">
+    
+    <label class="md-nav__link" for="nav-20">
+      Diary-2020-3
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-20">
+        Diary-2020-3
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../diaries/0/" title="Test" class="md-nav__link">
+      Test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../diaries/20200303/" title="First day" class="md-nav__link">
+      First day
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../diaries/4/" title="Second day" class="md-nav__link">
+      Second day
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    一、什么是持续集成？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    二、使用准备
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#travisyml" class="md-nav__link">
+    三、.travis.yml
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    四、运行流程
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-install" class="md-nav__link">
+    4.1 install 字段
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42script" class="md-nav__link">
+    4.2、script 字段
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-node" class="md-nav__link">
+    4.3 实例：Node 项目
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    4.4 部署
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45" class="md-nav__link">
+    4.5 钩子方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46" class="md-nav__link">
+    4.6 运行状态
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    五、使用技巧
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    5.1 环境变量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    5.2 加密信息
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    5.3 加密文件
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="travis-ci">持续集成服务 Travis CI 使用教程</h1>
+<p>编写代码只是软件开发的一小部分，更多的时间往往花在构建（build）和测试（test）。</p>
+<p>为了提高软件开发的效率，构建和测试的自动化工具层出不穷。Travis CI 就是这类工具之中，市场份额最大的一个。
+image</p>
+<p>本文介绍 Travis CI 的基本用法。用好这个工具不仅可以提高效率，还能使开发流程更可靠和专业化，从而提高软件的价值。而且，它对于开源项目是免费的，不花一分钱，就能帮你做掉很多事情。</p>
+<h2 id="_1">一、什么是持续集成？</h2>
+<p>Travis CI 提供的是持续集成服务（Continuous Integration，简称 CI）。它绑定 Github 上面的项目，只要有新的代码，就会自动抓取。然后，提供一个运行环境，执行测试，完成构建，还能部署到服务器。</p>
+<p>持续集成指的是只要代码有变更，就自动运行构建和测试，反馈运行结果。确保符合预期以后，再将新代码"集成"到主干。</p>
+<p>持续集成的好处在于，每次代码的小幅变更，就能看到运行结果，从而不断累积小的变更，而不是在开发周期结束时，一下子合并一大块代码。</p>
+<h2 id="_2">二、使用准备</h2>
+<p>Travis CI 只支持 Github，不支持其他代码托管服务。这意味着，你必须满足以下条件，才能使用 Travis CI。</p>
+<ul>
+<li>拥有 GitHub 帐号</li>
+<li>该帐号下面有一个项目</li>
+<li>该项目里面有可运行的代码</li>
+<li>该项目还包含构建或测试脚本</li>
+</ul>
+<p>如果这些条件都没问题，就可以开始使用 Travis CI 了。</p>
+<p>首先，访问官方网站 travis-ci.org，点击右上角的个人头像，使用 Github 账户登入 Travis CI。</p>
+<p>Travis 会列出 Github 上面你的所有仓库，以及你所属于的组织。此时，选择你需要 Travis 帮你构建的仓库，打开仓库旁边的开关。一旦激活了一个仓库，Travis 会监听这个仓库的所有变化。
+image</p>
+<h2 id="travisyml">三、.travis.yml</h2>
+<p>Travis 要求项目的根目录下面，必须有一个.travis.yml文件。这是配置文件，指定了 Travis 的行为。该文件必须保存在 Github 仓库里面，一旦代码仓库有新的 Commit，Travis 就会去找这个文件，执行里面的命令。</p>
+<p>这个文件采用 YAML 格式。下面是一个最简单的 Python 项目的.travis.yml文件。</p>
+<pre><code>language: python
+script: true
+</code></pre>
+
+<p>上面代码中，设置了两个字段。language字段指定了默认运行环境，这里设定使用 Python 环境。script字段指定要运行的脚本，script: true表示不执行任何脚本，状态直接设为成功。</p>
+<p>Travis 默认提供的运行环境，请参考官方文档 。目前一共支持31种语言，以后还会不断增加。</p>
+<p>下面是一个稍微复杂一点的.travis.yml。</p>
+<pre><code>language: python
+sudo: required
+before_install: sudo pip install foo
+script: py.test
+</code></pre>
+
+<p>上面代码中，设置了四个字段：运行环境是 Python，需要sudo权限，在安装依赖之前需要安装foo模块，然后执行脚本py.test。</p>
+<h2 id="_3">四、运行流程</h2>
+<p>Travis 的运行流程很简单，任何项目都会经过两个阶段。</p>
+<ul>
+<li>install 阶段：安装依赖</li>
+<li>script 阶段：运行脚本</li>
+</ul>
+<h3 id="41-install">4.1 install 字段</h3>
+<p>install字段用来指定安装脚本。</p>
+<pre><code>install: ./install-dependencies.sh
+</code></pre>
+
+<p>如果有多个脚本，可以写成下面的形式。</p>
+<pre><code>install:
+  - command1
+  - command2
+</code></pre>
+
+<p>上面代码中，如果command1失败了，整个构建就会停下来，不再往下进行。</p>
+<p>如果不需要安装，即跳过安装阶段，就直接设为true。</p>
+<pre><code>install: true
+</code></pre>
+
+<h3 id="42script">4.2、script 字段</h3>
+<p>script字段用来指定构建或测试脚本。</p>
+<pre><code>script: bundle exec thor build
+</code></pre>
+
+<p>如果有多个脚本，可以写成下面的形式。</p>
+<pre><code>script:
+  - command1
+  - command2
+</code></pre>
+
+<p>注意，script与install不一样，如果command1失败，command2会继续执行。但是，整个构建阶段的状态是失败。</p>
+<p>如果command2只有在command1成功后才能执行，就要写成下面这样。</p>
+<pre><code>script: command1 &amp;&amp; command2
+</code></pre>
+
+<h3 id="43-node">4.3 实例：Node 项目</h3>
+<p>Node 项目的环境需要写成下面这样。</p>
+<pre><code>language: node_js
+node_js:
+  - &quot;8&quot;
+</code></pre>
+
+<p>上面代码中，node_js字段用来指定 Node 版本。</p>
+<p>Node 项目的install和script阶段都有默认脚本，可以省略。</p>
+<ul>
+<li>install默认值：npm install</li>
+<li>script默认值：npm test</li>
+</ul>
+<p>更多设置请看官方文档。</p>
+<h3 id="44">4.4 部署</h3>
+<p>script阶段结束以后，还可以设置通知步骤（notification）和部署步骤（deployment），它们不是必须的。</p>
+<p>部署的脚本可以在script阶段执行，也可以使用 Travis 为几十种常见服务提供的快捷部署功能。比如，要部署到 Github Pages，可以写成下面这样。</p>
+<pre><code>deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  on:
+    branch: master
+</code></pre>
+
+<p>其他部署方式，请看官方文档。</p>
+<h3 id="45">4.5 钩子方法</h3>
+<p>Travis 为上面这些阶段提供了7个钩子。</p>
+<pre><code>-    before_install：install 阶段之前执行
+-    before_script：script 阶段之前执行
+-    after_failure：script 阶段失败时执行
+-    after_success：script 阶段成功时执行
+-    before_deploy：deploy 步骤之前执行
+-    after_deploy：deploy 步骤之后执行
+-    after_script：script 阶段之后执行
+</code></pre>
+<p>完整的生命周期，从开始到结束是下面的流程。</p>
+<ul>
+<li>before_install</li>
+<li>install</li>
+<li>before_script</li>
+<li>script</li>
+<li>aftersuccess or afterfailure</li>
+<li>[OPTIONAL] before_deploy</li>
+<li>[OPTIONAL] deploy</li>
+<li>[OPTIONAL] after_deploy</li>
+<li>after_script</li>
+</ul>
+<p>下面是一个before_install钩子的例子。</p>
+<pre><code>before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y libxml2-dev
+</code></pre>
+
+<p>上面代码表示before_install阶段要做两件事，第一件事是要更新依赖，第二件事是安装libxml2-dev。用到的几个参数的含义如下：-qq表示减少中间步骤的输出，-y表示如果需要用户输入，总是输入yes。</p>
+<h3 id="46">4.6 运行状态</h3>
+<p>最后，Travis 每次运行，可能会返回四种状态。</p>
+<ul>
+<li>passed：运行成功，所有步骤的退出码都是0</li>
+<li>canceled：用户取消执行</li>
+<li>errored：before_install、install、before_script有非零退出码，运行会立即停止
+        failed ：script有非零状态码 ，会继续运行</li>
+</ul>
+<h2 id="_4">五、使用技巧</h2>
+<h3 id="51">5.1 环境变量</h3>
+<p>.travis.yml的env字段可以定义环境变量。</p>
+<pre><code>env:
+  - DB=postgres
+  - SH=bash
+  - PACKAGE_VERSION=&quot;1.0.*&quot;
+</code></pre>
+
+<p>然后，脚本内部就使用这些变量了。</p>
+<p>有些环境变量（比如用户名和密码）不能公开，这时可以通过 Travis 网站，写在每个仓库的设置页里面，Travis 会自动把它们加入环境变量。这样一来，脚本内部依然可以使用这些环境变量，但是只有管理员才能看到变量的值。具体操作请看官方文档。
+image</p>
+<h3 id="52">5.2 加密信息</h3>
+<p>如果不放心保密信息明文存在 Travis 的网站，可以使用 Travis 提供的加密功能。</p>
+<p>首先，安装 Ruby 的包travis。</p>
+<pre><code>$ apt install travis
+</code></pre>
+
+<p>然后，就可以用travis encrypt命令加密信息。</p>
+<p>在项目的根目录下，执行下面的命令。</p>
+<pre><code>$ travis encrypt SOMEVAR=secretvalue
+</code></pre>
+
+<p>上面命令中，SOMEVAR是要加密的变量名，secretvalue是要加密的变量值。执行以后，屏幕上会输出如下信息。</p>
+<pre><code>secure: &quot;.... encrypted data ....&quot;
+</code></pre>
+
+<p>现在，就可以把这一行加入.travis.yml。</p>
+<pre><code>env:
+  global:
+    - secure: &quot;.... encrypted data ....&quot;
+</code></pre>
+
+<p>然后，脚本里面就可以使用环境变量$SOMEVAR了，Travis 会在运行时自动对它解密。</p>
+<p>travis encrypt命令的--add参数会把输出自动写入.travis.yml，省掉了修改env字段的步骤。</p>
+<pre><code>$ travis encrypt SOMEVAR=secretvalue --add
+</code></pre>
+
+<p>详细信息请看官方文档。</p>
+<h3 id="53">5.3 加密文件</h3>
+<p>如果要加密的是文件（比如私钥），Travis 提供了加密文件功能。</p>
+<p>安装命令行客户端以后，使用下面的命令登入 Travis CI。</p>
+<pre><code>$ travis login 
+</code></pre>
+
+<p>然后，进入项目的根目录，使用travis encrypt-file命令加密那些想要加密的文件。</p>
+<pre><code>$ travis encrypt-file bacon.txt
+
+encrypting bacon.txt for rkh/travis-encrypt-file-example
+storing result as bacon.txt.enc
+storing secure env variables for decryption
+
+Please add the following to your build script (before_install stage in your .travis.yml, for instance):
+
+    openssl aes-256-cbc -K $encrypted_0a6446eb3ae3_key -iv $encrypted_0a6446eb3ae3_key -in bacon.txt.enc -out bacon.txt -d
+
+Pro Tip: You can add it automatically by running with --add.
+
+Make sure to add bacon.txt.enc to the git repository.
+Make sure not to add bacon.txt to the git repository.
+Commit all changes to your .travis.yml.
+</code></pre>
+
+<p>上面的代码对文件bacon.txt进行加密，加密后会生成bacon.txt.enc，该文件需要提交到代码库。此外，该命令还会生成一个环境变量$encrypted_0a6446eb3ae3_key，保存密钥，储存在 Travis CI，文件解密时需要这个环境变量。你需要把解密所需的openssl命令，写在.travis.yml的before_install字段里面。这些都写在上面的命令行提示里面。</p>
+<p>--add参数可以自动把环境变量写入.travis.yml。</p>
+<pre><code>$ travis encrypt-file bacon.txt --add
+
+encrypting bacon.txt for rkh/travis-encrypt-file-example
+storing result as bacon.txt.enc
+storing secure env variables for decryption
+
+Make sure to add bacon.txt.enc to the git repository.
+Make sure not to add bacon.txt to the git repository.
+Commit all changes to your .travis.yml.
+</code></pre>
+
+<p>详细信息请看官方文档，实际的例子可以参考下面两篇文章。</p>
+<ul>
+<li>Auto-deploying built products to gh-pages with Travis</li>
+<li>SSH deploys with Travis CI</li>
+</ul>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../travis/" title="Travis CI 持续集成" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Travis CI 持续集成
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../fields/" title="Fields" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Fields
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
