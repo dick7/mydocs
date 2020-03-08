@@ -33,13 +33,69 @@ nav:
         - First day: diaries/20200303.md
         - Second day: diaries/4.md
 
-## add plugins
-# plugins:
-#   - 
+
+markdown_extensions:
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - footnotes
+  - meta
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+
+
+# add plugins
+plugins:
+  - search
+  - minify:
+      minify_html: true
+  - search
+  - git-revision-date-localized:
+      type: iso_datetime
+
 
 # uncomment under line to use the "readthedocs" theme
 # theme: readthedocs
 # `pip install material`
-theme: material
+theme: 
+  name: 'material'
+# name: null
+# custom_dir: 'mkdocs-material/material'
+  palette:
+    primary: 'green'
+    accent: 'green'
+  font:
+    text: 'Ubuntu'
+    code: 'Ubuntu Mono'
+  logo: 'imgs/ico-head.jpg'
+  language: 'en,zh'
 
+extra:
+  search:
+    language: 'en, zh'
+  social:
+    - type: 'github'
+      link: 'https://github.com/dick7'
+    - type: 'wechat'
+      link: 'https://weixin.com/dick7_love'
+    - type: 'linkedin'
+      link: 'https://www.linkedin.com/in/dick7_love'
+  manifest: 'manifest.webmanifest'
 
+repo_name: 'dick7/mydocs'
+repo_url: 'https://github.com/dick7/mydocs'
