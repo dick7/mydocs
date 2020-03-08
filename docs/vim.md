@@ -1,14 +1,14 @@
 # vi/[vim](http://www.vim.org/)
 
-## 1.[vimrc](https://github.com/dick7/vimrc)
+- 1.[vimrc](https://github.com/dick7/vimrc)
 
-## 2.[vim:cheatsheat](http://www.cheat-sheets.org/#Vim)
+- 2.[vim:cheatsheat](http://www.cheat-sheets.org/#Vim)
 
-### 2.1 vim 键盘图：
+## 2. vim 键盘图：
 
-![vim:keymap](imgs/vi-vim-cheat-sheet-sch.gif)
+- ![vim:keymap](imgs/vi-vim-cheat-sheet-sch.gif)
 
-### 2.2 vi/vim 的使用
+## 3. vi/vim 的使用
 
 基本上 vi/vim 共分为三种模式，分别是命令模式（Command mode），输入模式（Insert mode）和底线命令模式（Last line mode）。 这三种模式的作用分别是：
 命令模式：
@@ -59,13 +59,10 @@
 
 ![vim:workmodel](imgs/vim-vi-workmodel.png)
 
-### 2.3 vi/vim 使用实例
+## 4. vi/vim 使用实例
 
-使用 vi/vim 进入一般模式
+- 查找：`/`
+- 查找-替换：`:%s/AAA/BBB/g`,其中 '%'表示同一文件内的所有内容，不加表示光标所在行。
 
-如果你想要使用 vi 来建立一个名为 hello.txt 的文件时，你可以这样做：
-```
-$ vim hello.txt
-```
-
-直接输入 vi 文件名 就能够进入 vi 的一般模式了。请注意，记得 vi 后面一定要加文件名，不管该文件存在与否！
+    联想：与Linux的 `sed -i s/AAA/BBB/g `grep AAA -rl ./`` 命令相似。
+-
