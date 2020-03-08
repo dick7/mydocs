@@ -40,6 +40,6 @@ nav:
 # uncomment under line to use the "readthedocs" theme
 # theme: readthedocs
 # `pip install material`
-# theme: material
+theme: material
 
 
