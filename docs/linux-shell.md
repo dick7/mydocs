@@ -1,7 +1,11 @@
 # Linux 
 
-## 1.批量查找与替换
+## 1.sed-grep
 
+`sed-grep.sh`
+```
+sed -i "s/vim_runtime/vim/g" `grep "vim_runtime" -rl ./README.md`
+```
 经常要使用到 Linux 的批量查找与替换，这里我们为大家介绍使用 sed 命令来实现查找文件中的内容并替换。
 
 ### 语法格式
@@ -20,9 +24,6 @@ sed -i "s/https:\/\/baidu.com/https:\/\/ztloadfield.com/g" `grep -rl "baidu.com"
 ----------------^-^-----------------^-^--------------------------------------------
 **注意：插入 '\'的位置，其他位置不变。**
 ```
-### 参考命令
-  -  Linux sed命令： http://www.runoob.com/linux/linux-comm-sed.html
-  -  Linux grep命令：http://www.runoob.com/linux/linux-comm-grep.html
 
 ## 2.git webhook
 
@@ -30,7 +31,7 @@ ref:[*webhook.sh*](https://blog.csdn.net/qq_40995752/article/details/89467931)
 
 Here is mine: 
 
-`webhook.sh`
+`mywebhook.sh`
 
 ```bash
 #!/bin/bash
@@ -119,6 +120,7 @@ fi
 
 ### 3.1 if/for/test/array/case...esac/$#/string
 
+`~/mylf.sh`
 ```
 #!/bin/bash
 
@@ -213,6 +215,8 @@ done
 ```
 
 ### 3.2 if/$#/-gt/-e.../||
+
+`~/test-file.sh`
 ```
 #!/bin/bash
 
@@ -278,5 +282,58 @@ else
     exit
 fi
 
+```
+
+## 4.scp
+```
+sshpass -p "dick@206530" scp -r .vim root@121.43.154.253:/root
+scp root@106.13.213.177:/www/wwwroot/ftp/tmp_aria2/StormOnline-master.zip .
+# cd /mnt/d/backups/linux/zt-aliyun
+# sshpass -p “password” rsync -avz --delete root@121.43.154.253:/ .
+```
+
+## 5.rsync
+```
+echo '# 1.备份:zt-bd-yun'
+cd /mnt/d/backups/linux/zt-bd-yun
+# sshpass -p “password” rsync -avz --delete root@106.13.213.177:/www/wwwroot/ftp .
+nohup sshpass -p “dick@206530” rsync -avz root@106.13.213.177:/www . &
+
+echo '# 2.备份:zt-aliyun'
+cd /mnt/d/backups/linux/zt-aliyun
+nohup sshpass -p “dick@206530” rsync -avz root@121.43.154.253:/www . &
+#!/bin/bash
+```
+
+## 6.connect mysql
+```
+sudo sshpass -p 123 /etc/init.d/mysql restart
+
+# sudo sshpass -p 123 mysql -u root -p dbname < *.sql
+sudo sshpass -p 123 mysql -u root -p
+```
+
+## 7.kill ps
+```
+ps -ef|grep flask|awk {print }|xargs kill -9
+```
+
+## 8.pause
+```
+#!/bin/bash
+
+read -p 'Input pause time:' ipt
+
+ti1=`date +%s`    #获取时间戳
+ti2=`date +%s`
+i=$(($ti2 - $ti1 ))
+
+while [[ "$i" -ne "$ipt"  ]]
+do
+        ti2=`date +%s`
+        i=$(($ti2 - $ti1 ))
+done
+
+echo "Pause $ipt(s), over,then start!"
 ```
 
