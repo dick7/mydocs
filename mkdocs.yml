@@ -3,6 +3,13 @@ site_name: mydocs-MkDocs
 nav:
     - Home: index.md
     - MkDocs: mkdocs.md
+    - Fields: fields.md
+    - Imgs: imgs.md
+    - Links: links.md
+    - Jupyter: jupyter.md
+    - R: R.md
+    - M: M.md
+    - C: c.md
     - Markdown: markdown.md
     - Yaml: 
       - mydocs yaml: mydocs-yaml.md
@@ -10,9 +17,6 @@ nav:
     - Travis CI: 
       - Intro: travis.md 
       - Use: travis-1.md
-    - Fields: fields.md
-    - Imgs: imgs.md
-    - Links: links.md
     - SSH: ssh.md
     - Git/Github: git.md
     - Vi/Vim: vim.md
