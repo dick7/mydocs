@@ -27,7 +27,6 @@ By run bash:
 
 `cat mkdocs.yml >> docs/index.md`
 
-
 ```
 site_name: mydocs-MkDocs
 
@@ -37,10 +36,8 @@ nav:
     - Markdown: markdown.md
     - Yaml: yaml.md
     - Travis CI: 
-      # - Intro: travis.md 
-      # - Use: travis-1.md
-      - travis.md 
-      - travis-1.md  
+      - Intro: travis.md 
+      - Use: travis-1.md
     - Fields: fields.md
     - Imgs: imgs.md
     - Links: links.md
@@ -49,8 +46,8 @@ nav:
     - Vi/Vim: vim.md
     - Apt/pip/yum: apt.md
     - Linux/Shell: 
-      - linux-cmds.md
-      - linux-shell.md
+      - linux commands: linux-cmds.md
+      - linux shell: linux-shell.md
     - Nginx: nginx.md
     - Databases:
         - MySQL: dbs/mysql.md
@@ -64,15 +61,90 @@ nav:
         - First day: diaries/20200303.md
         - Second day: diaries/4.md
 
-## add plugins
-# plugins:
-#   - 
+markdown_extensions:
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - footnotes
+  - meta
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+
+# add plugins
+plugins:
+  - search
+  - minify:
+      minify_html: true
+  - search
+  - git-revision-date-localized:
+      type: iso_datetime
 
 # uncomment under line to use the "readthedocs" theme
 # theme: readthedocs
-# `pip install material`
-# theme: material
+# Need to install `pip install mkdocs-material`
+theme: 
+  name: 'material'
+# custom_dir: 'mkdocs-material/material'
+  palette:
+    primary: 'green'
+    accent: 'green'
+  font:
+    text: 'Ubuntu'
+    #    code: 'Ubuntu Mono'
+    code: 'Consolas'
+  logo: 'imgs/ico-head.jpg'
+# language: 'zh'
+  language: 'en'
+
+extra:
+  search:
+    language: 'en,zh'
+  social:
+    - type: 'github'
+      link: 'https://github.com/dick7'
+    - type: 'wechat'
+      link: 'https://weixin.com/dick7_love'
+    - type: 'linkedin'
+      link: 'https://www.linkedin.com/in/dick7_love'
+  manifest: 'manifest.webmanifest'
+
+# google_analytics:
+#  - 'UA-XXXXXXXX-X'
+#  - 'auto'
+
+repo_name: 'dick7/mydocs'
+repo_url: 'https://github.com/dick7/mydocs'
+
+copyright: 'Copyright &copy; 2020 - 2021 Dick Sven'
 
 ```
+
+## README
+
+***`README.md`***
+
+> mydocs made by python [MkDocs](http://doc.ztloadfield.com:8500/)
+> Themed by [mkdocs-material](https://github.com/squidfunk/mkdocs-material)
+
+- Source: [*mydocs*](https://github.com/dick7/mydocs)
+- Deploy site on: 
+  - [**github**](https://dick7.github.io/mydocs/)
+  - [**aliyun**](http://doc.ztloadfield.com:8500)
+
 
 

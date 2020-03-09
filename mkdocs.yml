@@ -69,7 +69,7 @@ plugins:
 
 # uncomment under line to use the "readthedocs" theme
 # theme: readthedocs
-# `pip install material`
+# Need to install `pip install mkdocs-material`
 theme: 
   name: 'material'
 # custom_dir: 'mkdocs-material/material'
@@ -96,7 +96,12 @@ extra:
       link: 'https://www.linkedin.com/in/dick7_love'
   manifest: 'manifest.webmanifest'
 
+# google_analytics:
+#  - 'UA-XXXXXXXX-X'
+#  - 'auto'
+
 repo_name: 'dick7/mydocs'
 repo_url: 'https://github.com/dick7/mydocs'
 
+copyright: 'Copyright &copy; 2020 - 2021 Dick Sven'
 
