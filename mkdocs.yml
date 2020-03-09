@@ -6,10 +6,8 @@ nav:
     - Markdown: markdown.md
     - Yaml: yaml.md
     - Travis CI: 
-      # - Intro: travis.md 
-      # - Use: travis-1.md
-      - travis.md 
-      - travis-1.md  
+      - Intro: travis.md 
+      - Use: travis-1.md
     - Fields: fields.md
     - Imgs: imgs.md
     - Links: links.md
@@ -18,8 +16,8 @@ nav:
     - Vi/Vim: vim.md
     - Apt/pip/yum: apt.md
     - Linux/Shell: 
-      - linux-cmds.md
-      - linux-shell.md
+      - linux commands: linux-cmds.md
+      - linux shell: linux-shell.md
     - Nginx: nginx.md
     - Databases:
         - MySQL: dbs/mysql.md
@@ -74,16 +72,17 @@ plugins:
 # `pip install material`
 theme: 
   name: 'material'
-# name: null
 # custom_dir: 'mkdocs-material/material'
   palette:
     primary: 'green'
     accent: 'green'
   font:
     text: 'Ubuntu'
-    code: 'Ubuntu Mono'
+    #    code: 'Ubuntu Mono'
+    code: 'Consolas'
   logo: 'imgs/ico-head.jpg'
-  language: 'zh'
+# language: 'zh'
+  language: 'en'
 
 extra:
   search:
@@ -99,3 +98,5 @@ extra:
 
 repo_name: 'dick7/mydocs'
 repo_url: 'https://github.com/dick7/mydocs'
+
+

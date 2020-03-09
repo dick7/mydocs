@@ -35,7 +35,7 @@ Here is mine:
 
 ```bash
 #!/bin/bash
-cat << EOF
+wc -l << EOF
 mywebhook.sh control hooks to github
 Author:dick7
 Date:20200307
@@ -71,7 +71,6 @@ if [ ! -n "$CD" ];then
     CD=$PWD
 fi
 
-
 printf " 'project=$project'\n 'CD=$CD'\n '0=$0'\n '1=$1'\n '2=$2'\n"
 
 gitLocal="$CD/$project"
@@ -79,8 +78,6 @@ gitRemote="$git_server/$git_user/$project.git"
 
 echo "gitLocal=$gitLocal"
 echo "gitRemote=$gitRemote"
-
-
 
 if [ -d "$gitLocal"  ];then
     echo "$gitLocal EXISTs！"
@@ -90,9 +87,12 @@ if [ -d "$gitLocal"  ];then
         echo -e "Needing:\n  1.'git init' and\n  2.'git remote add origin'"
         git init
         git remote add origin $gitRemote
-
-        if [ -e $gitLocal ];then
-            echo '!exsist file removed!'
+        #If there is any files,backup them or remove them.
+        p=`ls -a $gitLocal`
+        if [ ${#p} -lt 5 ];then
+            echo -e "$gitLocal is an empity DIR!But NOT a NULL DIR,it contains:\n[$p]!"
+        else
+            echo "You'd better to 'mv ./* ../backup/',here just 'rm -rf ./*'"
             rm -rf ./*
         fi
 
@@ -336,4 +336,5 @@ done
 
 echo "Pause $ipt(s), over,then start!"
 ```
+
 
