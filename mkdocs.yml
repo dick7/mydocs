@@ -86,7 +86,8 @@ theme:
 
 extra:
   search:
-    language: 'en,zh'
+    language: 'en'
+    tokenizer: '[\s\-\.]+'
   social:
     - type: 'github'
       link: 'https://github.com/dick7'
