@@ -40,7 +40,6 @@ nav:
         - First day: diaries/20200303.md
         - Second day: diaries/4.md
 
-
 markdown_extensions:
   - pymdownx.arithmatex
   - pymdownx.betterem:
