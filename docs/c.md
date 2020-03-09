@@ -4,5 +4,9 @@
 
 ```c
 #include<stdio.h>
-printf("Hello,world!\n")
+
+int main(){
+    printf("Hello,world!\n");
+    return 0;
+}
 ```
