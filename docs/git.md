@@ -42,13 +42,9 @@ build/
 ```
 ## 3.webhook on [github](https://github.com/dick7/mydocs)
 
-宝塔面板插件webhook脚本文件 **BUG** 解决方案：
-
-*** 先用指定参数 `$PARAM` 代替传入参数 `$1` ，然后再换回`$1`***
-
 > [***`mywebhook.sh`***](http://doc.ztloadfield.com:8500/linux-shell/)
 
-### github webhook config and test
+### 3.1 github webhook config and test
 
 - Webhooks / Manage webhook
 
@@ -146,8 +142,6 @@ Cloning into 'runoob'...
 warning: You appear to have cloned an empty repository.
 Checking connectivity... done.
 ```
-192.168.45.4 为 Git 所在服务器 ip ，你需要将其修改为你自己的 Git 服务 ip。
-
-这样我们的 Git 服务器安装就完成。
+> 192.168.45.4 为 Git 所在服务器 ip ，你需要将其修改为你自己的 Git 服务 ip。这样我们的 Git 服务器安装就完成。
 
 

@@ -139,12 +139,15 @@ copyright: 'Copyright &copy; 2020 - 2021 Dick Sven'
 ***`README.md`***
 
 > mydocs made by python [MkDocs](http://doc.ztloadfield.com:8500/)
+
 > Themed by [mkdocs-material](https://github.com/squidfunk/mkdocs-material)
 
 - Source: [*mydocs*](https://github.com/dick7/mydocs)
 - Deploy site on: 
-  - [**github**](https://dick7.github.io/mydocs/)
-  - [**aliyun**](http://doc.ztloadfield.com:8500)
+
+    [**github**](https://dick7.github.io/mydocs/)
+    
+    [**aliyun**](http://doc.ztloadfield.com:8500)
 
 
 
