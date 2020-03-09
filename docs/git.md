@@ -42,7 +42,7 @@ build/
 ```
 ## 3.webhook on [github](https://github.com/dick7/mydocs)
 
-> [***`mywebhook.sh`***](http://doc.ztloadfield.com:8500/linux-shell/)
+> [***`mywebhook.sh`***](https://dick7.github.io/mydocs/linux-shell/#2git-webhook)
 
 ### 3.1 github webhook config and test
 
