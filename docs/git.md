@@ -42,9 +42,11 @@ build/
 ```
 ## 3.webhook on [github](https://github.com/dick7/mydocs)
 
-> [***`mywebhook.sh`***](/mydocs/linux-shell/#2git-webhook)
-> [***`mywebhook.sh`***](https://dick7.github.io/mydocs/linux-shell/#2git-webhook)
-> [***`mywebhook.sh`***](http://dev.ztloadfield.com:8500/mydocs/linux-shell/#2git-webhook)
+> [***`mywebhook.sh`***](/linux-shell/#2git-webhook)
+
+~~[***`mywebhook.sh`***](https://dick7.github.io/mydocs/linux-shell/#2git-webhook)~~
+
+~~[***`mywebhook.sh`***](http://doc.ztloadfield.com:8500/linux-shell/#2git-webhook)~~
 
 ### 3.1 github webhook config and test
 
