@@ -1,3 +1,6 @@
+# mydocs yaml
+
+```
 site_name: mydocs-MkDocs
 
 nav:
@@ -107,4 +110,4 @@ repo_name: 'dick7/mydocs'
 repo_url: 'https://github.com/dick7/mydocs'
 
 copyright: 'Copyright &copy; 2020 - 2021 Dick Sven'
-
+```
