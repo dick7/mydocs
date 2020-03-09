@@ -1,484 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        
-        
-        <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Git/Github - mydocs-MkDocs</title>
-        <link href="../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+<!doctype html><html lang=en class=no-js> <head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><meta name=lang:clipboard.copy content="Copy to clipboard"><meta name=lang:clipboard.copied content="Copied to clipboard"><meta name=lang:search.language content=en,zh><meta name=lang:search.pipeline.stopwords content=True><meta name=lang:search.pipeline.trimmer content=True><meta name=lang:search.result.none content="No matching documents"><meta name=lang:search.result.one content="1 matching document"><meta name=lang:search.result.other content="# matching documents"><meta name=lang:search.tokenizer content=[\s\-]+><link rel="shortcut icon" href=../assets/images/favicon.png><meta name=generator content="mkdocs-1.1, mkdocs-material-4.6.3"><title>Git/Github - mydocs-MkDocs</title><link rel=stylesheet href=../assets/stylesheets/application.adb8469c.css><link rel=stylesheet href=../assets/stylesheets/application-palette.a8b3c06d.css><meta name=theme-color content=#4caf50><script src=../assets/javascripts/modernizr.86422ebf.js></script><link href=https://fonts.gstatic.com rel=preconnect crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700%7CConsolas&display=fallback"><style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Consolas","Courier New",Courier,monospace}</style><link rel=stylesheet href=../assets/fonts/material-icons.css><link rel=manifest type=application/manifest+json href=../manifest.webmanifest crossorigin=use-credentials></head> <body dir=ltr data-md-color-primary=green data-md-color-accent=green> <svg class=md-svg> <defs> <svg xmlns=http://www.w3.org/2000/svg width=416 height=448 viewbox="0 0 416 448" id=__github><path fill=currentColor d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg> </defs> </svg> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay data-md-component=overlay for=__drawer></label> <a href=#gitgithub tabindex=0 class=md-skip> Skip to content </a> <header class=md-header data-md-component=header> <nav class="md-header-nav md-grid"> <div class=md-flex> <div class="md-flex__cell md-flex__cell--shrink"> <a href=.. title=mydocs-MkDocs aria-label=mydocs-MkDocs class="md-header-nav__button md-logo"> <img alt=logo src=../imgs/ico-head.jpg width=24 height=24> </a> </div> <div class="md-flex__cell md-flex__cell--shrink"> <label class="md-icon md-icon--menu md-header-nav__button" for=__drawer></label> </div> <div class="md-flex__cell md-flex__cell--stretch"> <div class="md-flex__ellipsis md-header-nav__title" data-md-component=title> <span class=md-header-nav__topic> mydocs-MkDocs </span> <span class=md-header-nav__topic> Git/Github </span> </div> </div> <div class="md-flex__cell md-flex__cell--shrink"> <label class="md-icon md-icon--search md-header-nav__button" for=__search></label> <div class=md-search data-md-component=search role=dialog> <label class=md-search__overlay for=__search></label> <div class=md-search__inner role=search> <form class=md-search__form name=search> <input type=text class=md-search__input aria-label=search name=query placeholder=Search autocapitalize=off autocorrect=off autocomplete=off spellcheck=false data-md-component=query data-md-state=active> <label class="md-icon md-search__icon" for=__search></label> <button type=reset class="md-icon md-search__icon" data-md-component=reset tabindex=-1> &#xE5CD; </button> </form> <div class=md-search__output> <div class=md-search__scrollwrap data-md-scrollfix> <div class=md-search-result data-md-component=result> <div class=md-search-result__meta> Type to start searching </div> <ol class=md-search-result__list></ol> </div> </div> </div> </div> </div> </div> <div class="md-flex__cell md-flex__cell--shrink"> <div class=md-header-nav__source> <a href=https://github.com/dick7/mydocs/ title="Go to repository" class=md-source data-md-source=github> <div class=md-source__icon> <svg viewbox="0 0 24 24" width=24 height=24> <use xlink:href=#__github width=24 height=24></use> </svg> </div> <div class=md-source__repository> dick7/mydocs </div> </a> </div> </div> </div> </nav> </header> <div class=md-container> <main class=md-main role=main> <div class="md-main__inner md-grid" data-md-component=container> <div class="md-sidebar md-sidebar--primary" data-md-component=navigation> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--primary" data-md-level=0> <label class="md-nav__title md-nav__title--site" for=__drawer> <a href=.. title=mydocs-MkDocs class="md-nav__button md-logo"> <img alt=logo src=../imgs/ico-head.jpg width=48 height=48> </a> mydocs-MkDocs </label> <div class=md-nav__source> <a href=https://github.com/dick7/mydocs/ title="Go to repository" class=md-source data-md-source=github> <div class=md-source__icon> <svg viewbox="0 0 24 24" width=24 height=24> <use xlink:href=#__github width=24 height=24></use> </svg> </div> <div class=md-source__repository> dick7/mydocs </div> </a> </div> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=.. title=Home class=md-nav__link> Home </a> </li> <li class=md-nav__item> <a href=../mkdocs/ title=MkDocs class=md-nav__link> MkDocs </a> </li> <li class=md-nav__item> <a href=../markdown/ title=Markdown class=md-nav__link> Markdown </a> </li> <li class=md-nav__item> <a href=../yaml/ title=Yaml class=md-nav__link> Yaml </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-toggle md-nav__toggle" data-md-toggle=nav-5 type=checkbox id=nav-5> <label class=md-nav__link for=nav-5> Travis CI </label> <nav class=md-nav data-md-component=collapsible data-md-level=1> <label class=md-nav__title for=nav-5> Travis CI </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../travis/ title=Intro class=md-nav__link> Intro </a> </li> <li class=md-nav__item> <a href=../travis-1/ title=Use class=md-nav__link> Use </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../fields/ title=Fields class=md-nav__link> Fields </a> </li> <li class=md-nav__item> <a href=../imgs/ title=Imgs class=md-nav__link> Imgs </a> </li> <li class=md-nav__item> <a href=../links/ title=Links class=md-nav__link> Links </a> </li> <li class=md-nav__item> <a href=../ssh/ title=SSH class=md-nav__link> SSH </a> </li> <li class="md-nav__item md-nav__item--active"> <input class="md-toggle md-nav__toggle" data-md-toggle=toc type=checkbox id=__toc> <label class="md-nav__link md-nav__link--active" for=__toc> Git/Github </label> <a href=./ title=Git/Github class="md-nav__link md-nav__link--active"> Git/Github </a> <nav class="md-nav md-nav--secondary"> <label class=md-nav__title for=__toc>Table of contents</label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=#1git-push-without-password class=md-nav__link> 1.git push without password </a> </li> <li class=md-nav__item> <a href=#2git-basic-operations class=md-nav__link> 2.git basic operations </a> </li> <li class=md-nav__item> <a href=#3webhook-on-github class=md-nav__link> 3.webhook on github </a> <nav class=md-nav> <ul class=md-nav__list> <li class=md-nav__item> <a href=#31-github-webhook-config-and-test class=md-nav__link> 3.1 github webhook config and test </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#4git-server class=md-nav__link> 4.git server </a> <nav class=md-nav> <ul class=md-nav__list> <li class=md-nav__item> <a href=#1git class=md-nav__link> (1)、安装Git </a> </li> <li class=md-nav__item> <a href=#2 class=md-nav__link> (2)、创建证书登录 </a> </li> <li class=md-nav__item> <a href=#3git class=md-nav__link> (3)、初始化Git仓库 </a> </li> <li class=md-nav__item> <a href=#4 class=md-nav__link> (4)、克隆仓库 </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../vim/ title=Vi/Vim class=md-nav__link> Vi/Vim </a> </li> <li class=md-nav__item> <a href=../apt/ title=Apt/pip/yum class=md-nav__link> Apt/pip/yum </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-toggle md-nav__toggle" data-md-toggle=nav-13 type=checkbox id=nav-13> <label class=md-nav__link for=nav-13> Linux/Shell </label> <nav class=md-nav data-md-component=collapsible data-md-level=1> <label class=md-nav__title for=nav-13> Linux/Shell </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../linux-cmds/ title="linux commands" class=md-nav__link> linux commands </a> </li> <li class=md-nav__item> <a href=../linux-shell/ title="linux shell" class=md-nav__link> linux shell </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../nginx/ title=Nginx class=md-nav__link> Nginx </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-toggle md-nav__toggle" data-md-toggle=nav-15 type=checkbox id=nav-15> <label class=md-nav__link for=nav-15> Databases </label> <nav class=md-nav data-md-component=collapsible data-md-level=1> <label class=md-nav__title for=nav-15> Databases </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../dbs/mysql/ title=MySQL class=md-nav__link> MySQL </a> </li> <li class=md-nav__item> <a href=../dbs/mongo/ title=Mongo class=md-nav__link> Mongo </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../python/ title=Python class=md-nav__link> Python </a> </li> <li class=md-nav__item> <a href=../django/ title=Django class=md-nav__link> Django </a> </li> <li class=md-nav__item> <a href=../flask/ title=Flask class=md-nav__link> Flask </a> </li> <li class=md-nav__item> <a href=../cheat-sheets/ title=Cheat-Sheets class=md-nav__link> Cheat-Sheets </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-toggle md-nav__toggle" data-md-toggle=nav-20 type=checkbox id=nav-20> <label class=md-nav__link for=nav-20> Diary-2020-3 </label> <nav class=md-nav data-md-component=collapsible data-md-level=1> <label class=md-nav__title for=nav-20> Diary-2020-3 </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../diaries/0/ title=Test class=md-nav__link> Test </a> </li> <li class=md-nav__item> <a href=../diaries/20200303/ title="First day" class=md-nav__link> First day </a> </li> <li class=md-nav__item> <a href=../diaries/4/ title="Second day" class=md-nav__link> Second day </a> </li> </ul> </nav> </li> </ul> </nav> </div> </div> </div> <div class="md-sidebar md-sidebar--secondary" data-md-component=toc> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--secondary"> <label class=md-nav__title for=__toc>Table of contents</label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=#1git-push-without-password class=md-nav__link> 1.git push without password </a> </li> <li class=md-nav__item> <a href=#2git-basic-operations class=md-nav__link> 2.git basic operations </a> </li> <li class=md-nav__item> <a href=#3webhook-on-github class=md-nav__link> 3.webhook on github </a> <nav class=md-nav> <ul class=md-nav__list> <li class=md-nav__item> <a href=#31-github-webhook-config-and-test class=md-nav__link> 3.1 github webhook config and test </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#4git-server class=md-nav__link> 4.git server </a> <nav class=md-nav> <ul class=md-nav__list> <li class=md-nav__item> <a href=#1git class=md-nav__link> (1)、安装Git </a> </li> <li class=md-nav__item> <a href=#2 class=md-nav__link> (2)、创建证书登录 </a> </li> <li class=md-nav__item> <a href=#3git class=md-nav__link> (3)、初始化Git仓库 </a> </li> <li class=md-nav__item> <a href=#4 class=md-nav__link> (4)、克隆仓库 </a> </li> </ul> </nav> </li> </ul> </nav> </div> </div> </div> <div class=md-content> <article class="md-content__inner md-typeset"> <a href=https://github.com/dick7/mydocs/edit/master/docs/git.md title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a> <h1 id=gitgithub>Git/Github<a class=headerlink href=#gitgithub title="Permanent link">&para;</a></h1> <h2 id=1git-push-without-password>1.git push without password<a class=headerlink href=#1git-push-without-password title="Permanent link">&para;</a></h2> <div class=codehilite><pre><span></span><code><span class=err>ssh-keygen # 公钥生成，然后把公钥放到GitHub上</span>
+<span class=err>git config --global user.email &quot;xxx@xxmail.com&quot;</span>
+<span class=err>git config --global user.name &quot;xxx&quot;</span>
+<span class=err>git config --global user.password &quot;xxx&quot;</span>
+<span class=err>git config --global credential.helper store # git push的时候记住用户名和密码</span>
+<span class=err>git config --global push.default simple</span>
+</code></pre></div> <h2 id=2git-basic-operations>2.git basic operations<a class=headerlink href=#2git-basic-operations title="Permanent link">&para;</a></h2> <p><div class=codehilite><pre><span></span><code><span class=err># git clone https://github.com/dick7/mydocs.git</span>
+<span class=err>git init </span>
+<span class=err># git reset --hard origin/master</span>
+<span class=err># git branch --set-upstream-to=origin/master</span>
+<span class=err># git branch --set-upstream-to=origin/dev</span>
+<span class=err>git add .</span>
+<span class=err>git commit -m &#39;1st upload to github&#39;</span>
+<span class=err>git remote add origin https://github.com/dick7/mydocs.git</span>
+<span class=err>git pull [--rebase]</span>
+<span class=err>git push [-f -u origin dev]</span>
+</code></pre></div> <code class=codehilite><span class=err>vi .gitignore</span></code> <div class=codehilite><pre><span></span><code><span class=n>venv</span><span class=o>/</span>
 
-        <script src="../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script> 
-    </head>
+<span class=o>*</span><span class=p>.</span><span class=n>pyc</span>
+<span class=n>__pycache__</span><span class=o>/</span>
 
-    <body>
-        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href="..">mydocs-MkDocs</a>
-                <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+<span class=n>instance</span><span class=o>/</span>
 
-                <!-- Expanded navigation -->
-                <div id="navbar-collapse" class="navbar-collapse collapse">
-                        <!-- Main navigation -->
-                        <ul class="nav navbar-nav">
-                            <li class="navitem">
-                                <a href=".." class="nav-link">Home</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="../mkdocs/" class="nav-link">MkDocs</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="../markdown/" class="nav-link">Markdown</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="../yaml/" class="nav-link">Yaml</a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Travis CI <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../travis/" class="dropdown-item">Travis CI 持续集成</a>
-</li>
-                                    
-<li>
-    <a href="../travis-1/" class="dropdown-item">持续集成服务 Travis CI 使用教程</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="navitem">
-                                <a href="../fields/" class="nav-link">Fields</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="../imgs/" class="nav-link">Imgs</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="../links/" class="nav-link">Links</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="../ssh/" class="nav-link">SSH</a>
-                            </li>
-                            <li class="navitem active">
-                                <a href="./" class="nav-link">Git/Github</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="../vim/" class="nav-link">Vi/Vim</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="../apt/" class="nav-link">Apt/pip/yum</a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Linux/Shell <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../linux-cmds/" class="dropdown-item">Linux 命令大全</a>
-</li>
-                                    
-<li>
-    <a href="../linux-shell/" class="dropdown-item">Linux</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="navitem">
-                                <a href="../nginx/" class="nav-link">Nginx</a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Databases <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../dbs/mysql/" class="dropdown-item">MySQL</a>
-</li>
-                                    
-<li>
-    <a href="../dbs/mongo/" class="dropdown-item">Mongo</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="navitem">
-                                <a href="../python/" class="nav-link">Python</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="../django/" class="nav-link">Django</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="../flask/" class="nav-link">Flask</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="../cheat-sheets/" class="nav-link">Cheat-Sheets</a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Diary-2020-3 <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../diaries/0/" class="dropdown-item">Test</a>
-</li>
-                                    
-<li>
-    <a href="../diaries/20200303/" class="dropdown-item">First day</a>
-</li>
-                                    
-<li>
-    <a href="../diaries/4/" class="dropdown-item">Second day</a>
-</li>
-                                </ul>
-                            </li>
-                        </ul>
+<span class=p>.</span><span class=n>pytest_cache</span><span class=o>/</span>
+<span class=p>.</span><span class=n>coverage</span>
+<span class=n>htmlcov</span><span class=o>/</span>
 
-                    <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
-                            </a>
-                        </li>
-                            <li class="nav-item">
-                                <a rel="prev" href="../ssh/" class="nav-link">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" href="../vim/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
-            <span class="fa fa-angle-down"></span>
-        </button>
-    </div>
-
-    
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
-        <ul class="nav flex-column">
-            
-            <li class="nav-item" data-level="1"><a href="#gitgithub" class="nav-link">Git/Github</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#1git-push-without-password" class="nav-link">1.git push without password</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#2git-basic-operations" class="nav-link">2.git basic operations</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#3webhook-on-github" class="nav-link">3.webhook on github</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#4git-server" class="nav-link">4.git server</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
-        </ul>
-    </div>
-</div></div>
-                    <div class="col-md-9" role="main">
-
-<h1 id="gitgithub">Git/Github</h1>
-<h2 id="1git-push-without-password">1.git push without password</h2>
-<pre><code>ssh-keygen # 公钥生成，然后把公钥放到GitHub上
-git config --global user.email &quot;xxx@xxmail.com&quot;
-git config --global user.name &quot;xxx&quot;
-git config --global user.password &quot;xxx&quot;
-git config --global credential.helper store # git push的时候记住用户名和密码
-git config --global push.default simple
-</code></pre>
-
-<h2 id="2git-basic-operations">2.git basic operations</h2>
-<pre><code># git clone https://github.com/dick7/mydocs.git
-git init 
-# git reset --hard origin/master
-# git branch --set-upstream-to=origin/master
-# git branch --set-upstream-to=origin/dev
-git add .
-git commit -m '1st upload to github'
-git remote add origin https://github.com/dick7/mydocs.git
-git pull [--rebase]
-git push [-f -u origin dev]
-</code></pre>
-
-<h2 id="3webhook-on-github">3.webhook on <a href="https://github.com/dick7/mydocs">github</a></h2>
-<p>宝塔面板插件webhook脚本文件 <strong>BUG</strong> 解决方案：</p>
-<p><strong><em> 先用指定参数 <code>$PARAM</code> 代替传入参数 <code>$1</code> ，然后再换回<code>$1</code></em></strong></p>
-<ul>
-<li>test-webhook.sh </li>
-</ul>
-<pre><code>#!/bin/bash
-
-echo &quot;Some ('push') event(s) makes webhook start!&quot;
-echo &quot;-------------------Start-------------------&quot;
-date --date='0 days ago' &quot;+%Y-%m-%d %H:%M:%S&quot;
-
-access_key=KjL3aQB6mvapcokPhOuWJ6NLPACa5QYVZzY1cRtjEp2s3as0
-
-printf &quot;'PARAM=$PARAM'\n '0=$0'\n '1=$1'\n '2=$2'\n&quot;
-PARAM=DjangoBlog
-# PARAM=$1
-# CD=/www/wwwroot/
-CD=/www/wwwroot/new-realm.cn/dev
-echo &quot;The ONLY parameter you need to change is the 'CD=$CD' you will clone into.&quot;
-
-if [ ! -n &quot;$PARAM&quot; ];
-then
-    echo &quot;$PARAM is NULL!No param come in!&quot;
-    echo &quot;--------------------End--------------------&quot;
-    exit
-fi
-
-gitLocal=&quot;$CD/$PARAM&quot;
-gitRemote=&quot;https://github.com/dick7/$PARAM.git&quot;
-
-echo &quot;gitLocal: $gitLocal&quot;
-echo &quot;gitRemote: $gitRemote&quot;
-
-if [ -d &quot;$gitLocal&quot;  ];
-then
-    echo &quot;$gitLocal EXISTs！&quot;
-    cd $gitLocal
-    if [ ! -d &quot;.git&quot;  ]; then
-        echo &quot;$gitLocal dir does NOT contain '.git'!Needing 'git clone ...'&quot;
-        git clone $gitRemote gittemp
-        # echo &quot;git clone completed! then 'mv gittemp/.git .'&quot;
-        mv gittemp/.* . -f
-        echo &quot;FOR GITHUB,needing 'mv gittemp/* .'&quot;
-        mv gittemp/* . -f
-        echo &quot;Are you sure 'rm -rf gittemp'?&quot;
-        rm -rf gittemp
-    fi
-    echo &quot;'git pull ...' from $gitRemote.&quot;
-    #git reset --hard origin/master
-    git pull
-    echo -e &quot;change $gitLocal own rights to 'www:www'.\n NOTICE: the 'git status' will change to 'delete' or 'mode changed'!&quot;
-    chown -R www:www $gitLocal
-    echo &quot;--------------------End--------------------&quot;
-    exit
-else
-    echo &quot;$gitLocal does NOT EXIST!&quot;
-    echo &quot;--------------------End--------------------&quot;
-    exit
-fi
-</code></pre>
-
-<h3 id="github-webhook-config-and-test">github webhook config and test</h3>
-<ul>
-<li>Webhooks / Manage webhook</li>
-</ul>
-<p>We’ll send a POST request to the URL below with details of any subscribed events. You can also specify which data format you’d like to receive (JSON, x-www-form-urlencoded, etc). More information can be found in our developer documentation.</p>
-<ul>
-<li>Payload URL</li>
-</ul>
-<pre><code>http://IP:8888/hook?access_key=***bTk&amp;param=mydocs
-</code></pre>
-
-<ul>
-<li>Content type</li>
-</ul>
-<p>~~default~~</p>
-<ul>
-<li>Secret</li>
-</ul>
-<p>~~default NULL~~</p>
-<ul>
-<li>Which events would you like to trigger this webhook?</li>
-</ul>
-<blockquote>
-<p>Just the push event. ~~default~~
- Send me everything.
- Let me select individual events.</p>
-</blockquote>
-<ul>
-<li>
-<p><strong>Active</strong></p>
-<p>When activated, the <code>github.com</code> will give a message below:
-<code>Okay, that hook was successfully created. We sent a ping payload to test it out! Read more about it at https://developer.github.com/webhooks/#ping-event.</code>
-, stands for setting ok and completed.</p>
-</li>
-</ul>
-<p>We will deliver event details when this hook is triggered.
-Recent Deliveries</p>
-<ul>
-<li>
-<p>Recent Deliveries</p>
-<p>e3125208-5c62-11ea-8fe3-094f6a057ebd</p>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th><strong>Request</strong></th>
-<th><strong>Response</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>URL: http://IP:8888/hook?access_key=***&amp;param=mydocs</td>
-<td>{"code": 1}</td>
-</tr>
-<tr>
-<td>...</td>
-<td>...</td>
-</tr>
-</tbody>
-</table>
-<h2 id="4git-server">4.git server</h2>
-<p>当然我们也可以自己搭建一台 Git 服务器作为私有仓库使用。</p>
-<p>接下来我们将以 Centos 为例搭建 Git 服务器。</p>
-<h3 id="1git">(1)、安装Git</h3>
-<pre><code>$ yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel perl-devel
+<span class=n>dist</span><span class=o>/</span>
+<span class=n>build</span><span class=o>/</span>
+<span class=o>*</span><span class=p>.</span><span class=n>egg</span><span class=o>-</span><span class=n>info</span><span class=o>/</span>
+</code></pre></div></p> <h2 id=3webhook-on-github>3.webhook on <a href=https://github.com/dick7/mydocs>github</a><a class=headerlink href=#3webhook-on-github title="Permanent link">&para;</a></h2> <blockquote> <p><a href=http://doc.ztloadfield.com:8500/linux-shell/ ><strong><em><code class=codehilite><span class=err>mywebhook.sh</span></code></em></strong></a></p> </blockquote> <h3 id=31-github-webhook-config-and-test>3.1 github webhook config and test<a class=headerlink href=#31-github-webhook-config-and-test title="Permanent link">&para;</a></h3> <ul> <li>Webhooks / Manage webhook</li> </ul> <p>We’ll send a POST request to the URL below with details of any subscribed events. You can also specify which data format you’d like to receive (JSON, x-www-form-urlencoded, etc). More information can be found in our developer documentation.</p> <ul> <li> <p>Payload URL <div class=codehilite><pre><span></span><code><span class=c>http://IP:8888/hook?access_key=***bTk&amp;param=mydocs</span>
+</code></pre></div></p> </li> <li> <p>Content type</p> </li> </ul> <p><del>default</del></p> <ul> <li>Secret</li> </ul> <p><del>default NULL</del></p> <ul> <li>Which events would you like to trigger this webhook?</li> </ul> <blockquote> <p>Just the push event. <del>default</del> Send me everything. Let me select individual events.</p> </blockquote> <ul> <li> <p><strong>Active</strong></p> <p>When activated, the <code class=codehilite><span class=err>github.com</span></code> will give a message below: <div class=codehilite><pre><span></span><code><span class=err>Okay, that hook was successfully created. We sent a ping payload to test it out! Read more about it at https://developer.github.com/webhooks/#ping-event.</span>
+</code></pre></div> , stands for setting ok and completed.</p> </li> </ul> <p>We will deliver event details when this hook is triggered. Recent Deliveries</p> <ul> <li> <p>Recent Deliveries</p> <p>e3125208-5c62-11ea-8fe3-094f6a057ebd</p> </li> </ul> <table> <thead> <tr> <th><strong>Request</strong></th> <th><strong>Response</strong></th> </tr> </thead> <tbody> <tr> <td>URL: <a href="http://IP:8888/hook?access_key=">http://IP:8888/hook?access_key=</a>***&amp;param=mydocs</td> <td>{"code": 1}</td> </tr> <tr> <td>...</td> <td>...</td> </tr> </tbody> </table> <h2 id=4git-server>4.git server<a class=headerlink href=#4git-server title="Permanent link">&para;</a></h2> <p>当然我们也可以自己搭建一台 Git 服务器作为私有仓库使用。</p> <p>接下来我们将以 Centos 为例搭建 Git 服务器。</p> <h3 id=1git>(1)、安装Git<a class=headerlink href=#1git title="Permanent link">&para;</a></h3> <p><div class=codehilite><pre><span></span><code>$ yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel perl-devel
 $ yum install git
-</code></pre>
-
-<p>接下来我们 创建一个git用户组和用户，用来运行git服务：</p>
-<pre><code>$ groupadd git
+</code></pre></div> 接下来我们 创建一个git用户组和用户，用来运行git服务： <div class=codehilite><pre><span></span><code>$ groupadd git
 $ useradd git -g git
-</code></pre>
-
-<h3 id="2">(2)、创建证书登录</h3>
-<p>收集所有需要登录的用户的公钥，公钥位于id_rsa.pub文件中，把我们的公钥导入到/home/git/.ssh/authorized_keys文件里，一行一个。</p>
-<p>如果没有该文件创建它：</p>
-<pre><code>$ cd /home/git/
+</code></pre></div></p> <h3 id=2>(2)、创建证书登录<a class=headerlink href=#2 title="Permanent link">&para;</a></h3> <p>收集所有需要登录的用户的公钥，公钥位于id_rsa.pub文件中，把我们的公钥导入到/home/git/.ssh/authorized_keys文件里，一行一个。</p> <p>如果没有该文件创建它： <div class=codehilite><pre><span></span><code>$ <span class=nb>cd</span> /home/git/
 $ mkdir .ssh
-$ chmod 755 .ssh
+$ chmod <span class=m>755</span> .ssh
 $ touch .ssh/authorized_keys
-$ chmod 644 .ssh/authorized_keys
-</code></pre>
-
-<h3 id="3git">(3)、初始化Git仓库</h3>
-<p>首先我们选定一个目录作为Git仓库，假定是/home/gitrepo/mygit.git，在/home/gitrepo目录下输入命令：</p>
-<pre><code>$ cd /home
+$ chmod <span class=m>644</span> .ssh/authorized_keys
+</code></pre></div></p> <h3 id=3git>(3)、初始化Git仓库<a class=headerlink href=#3git title="Permanent link">&para;</a></h3> <p>首先我们选定一个目录作为Git仓库，假定是/home/gitrepo/mygit.git，在/home/gitrepo目录下输入命令： <div class=codehilite><pre><span></span><code>$ <span class=nb>cd</span> /home
 $ mkdir gitrepo
 $ chown git:git gitrepo/
-$ cd gitrepo
+$ <span class=nb>cd</span> gitrepo
 
 $ git init --bare mygit.git
 Initialized empty Git repository in /home/gitrepo/mygit.git
-
-</code></pre>
-
-<p>以上命令Git创建一个空仓库，服务器上的Git仓库通常都以.git结尾。然后，把仓库所属用户改为git：</p>
-<pre><code>$ chown -R git:git mygit.git
-</code></pre>
-
-<h3 id="4">(4)、克隆仓库</h3>
-<pre><code>$ git clone git@192.168.45.4:/home/gitrepo/mygit.git
-Cloning into 'runoob'...
-warning: You appear to have cloned an empty repository.
-Checking connectivity... done.
-</code></pre>
-
-<p>192.168.45.4 为 Git 所在服务器 ip ，你需要将其修改为你自己的 Git 服务 ip。</p>
-<p>这样我们的 Git 服务器安装就完成。</p>
-<p>venv/</p>
-<p>*.pyc
-<strong>pycache</strong>/</p>
-<p>instance/</p>
-<p>.pytest_cache/
-.coverage
-htmlcov/</p>
-<p>dist/
-build/
-*.egg-info/</p></div>
-            </div>
-        </div>
-
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script>
-            var base_url = "..",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
-        </script>
-        <script src="../js/base.js" defer></script>
-        <script src="../search/main.js" defer></script>
-
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            </div>
-            <div class="modal-body">
-                <p>
-                    From here you can search these documents. Enter
-                    your search terms below.
-                </p>
-                <form>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-</div>
-
-    </body>
-</html>
+</code></pre></div> 以上命令Git创建一个空仓库，服务器上的Git仓库通常都以.git结尾。然后，把仓库所属用户改为git： <div class=codehilite><pre><span></span><code>$ chown -R git:git mygit.git
+</code></pre></div></p> <h3 id=4>(4)、克隆仓库<a class=headerlink href=#4 title="Permanent link">&para;</a></h3> <div class=codehilite><pre><span></span><code><span class=err>$</span> <span class=n>git</span> <span class=n>clone</span> <span class=n>git</span><span class=mf>@192.168.45.4</span><span class=o>:/</span><span class=n>home</span><span class=o>/</span><span class=n>gitrepo</span><span class=o>/</span><span class=n>mygit</span><span class=p>.</span><span class=n>git</span>
+<span class=n>Cloning</span> <span class=n>into</span> <span class=err>&#39;</span><span class=n>runoob</span><span class=err>&#39;</span><span class=p>...</span>
+<span class=nl>warning</span><span class=p>:</span> <span class=n>You</span> <span class=n>appear</span> <span class=n>to</span> <span class=n>have</span> <span class=n>cloned</span> <span class=n>an</span> <span class=n>empty</span> <span class=n>repository</span><span class=p>.</span>
+<span class=n>Checking</span> <span class=n>connectivity</span><span class=p>...</span> <span class=n>done</span><span class=p>.</span>
+</code></pre></div> <blockquote> <p>192.168.45.4 为 Git 所在服务器 ip ，你需要将其修改为你自己的 Git 服务 ip。这样我们的 Git 服务器安装就完成。</p> </blockquote> <hr> <div class=md-source-date> <small> Last update: 2020-03-09 08:36:31 </small> </div> </article> </div> </div> </main> <footer class=md-footer> <div class=md-footer-nav> <nav class="md-footer-nav__inner md-grid"> <a href=../ssh/ title=SSH class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel=prev> <div class="md-flex__cell md-flex__cell--shrink"> <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i> </div> <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"> <span class=md-flex__ellipsis> <span class=md-footer-nav__direction> Previous </span> SSH </span> </div> </a> <a href=../vim/ title=Vi/Vim class="md-flex md-footer-nav__link md-footer-nav__link--next" rel=next> <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"> <span class=md-flex__ellipsis> <span class=md-footer-nav__direction> Next </span> Vi/Vim </span> </div> <div class="md-flex__cell md-flex__cell--shrink"> <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i> </div> </a> </nav> </div> <div class="md-footer-meta md-typeset"> <div class="md-footer-meta__inner md-grid"> <div class=md-footer-copyright> <div class=md-footer-copyright__highlight> Copyright &copy; 2020 - 2021 Dick Sven </div> powered by <a href=https://www.mkdocs.org target=_blank rel=noopener>MkDocs</a> and <a href=https://squidfunk.github.io/mkdocs-material/ target=_blank rel=noopener> Material for MkDocs</a> </div> <div class=md-footer-social> <link rel=stylesheet href=../assets/fonts/font-awesome.css> <a href=https://github.com/dick7 target=_blank rel=noopener title=github class="md-footer-social__link fa fa-github"></a> <a href=https://weixin.com/dick7_love target=_blank rel=noopener title=wechat class="md-footer-social__link fa fa-wechat"></a> <a href=https://www.linkedin.com/in/dick7_love target=_blank rel=noopener title=linkedin class="md-footer-social__link fa fa-linkedin"></a> </div> </div> </div> </footer> </div> <script src=../assets/javascripts/application.c33a9706.js></script> <script src=../assets/javascripts/lunr/lunr.stemmer.support.js></script> <script src=../assets/javascripts/lunr/lunr.multi.js></script> <script>app.initialize({version:"1.1",url:{base:".."}})</script> </body> </html>
