@@ -22,12 +22,15 @@ nav:
       - linux shell: linux-shell.md
     - Nginx: nginx.md
     - Databases:
-        - MySQL: dbs/mysql.md
-        - Mongo: dbs/mongo.md
-    - Python: python.md
+      - MySQL: dbs/mysql.md
+      - Mongo: dbs/mongo.md
+    - Python: 
+      - basic: python.md
+      - apply: bt.md
     - Django: django.md
     - Flask: flask.md
     - Cheat-Sheets: cheat-sheets.md
+    - Nat: frp.md
     - Diary-2020-3: 
         - Test: diaries/0.md
         - First day: diaries/20200303.md
@@ -93,10 +96,38 @@ extra:
   social:
     - type: 'github'
       link: 'https://github.com/dick7'
-    - type: 'wechat'
-      link: 'https://weixin.com/dick7_love'
+    - type: 'gitee'
+      link: 'https://gitee.com/dick7_love'
     - type: 'linkedin'
       link: 'https://www.linkedin.com/in/dick7_love'
+    - type: 'juejin'
+      link: 'https://juejin.im/user/5e5e5768e51d4526d43f3ac6'
+    - type: 'kuaishou'
+      link: 'https://live.kuaishou.com/profile/3xn5rycf9cpr9s4'
+    - type: 'wechat'
+      link: 'https://wx.qq.com/dick7_love'
+    - tpye: 'zhihu'
+      link: 'https://www.zhihu.com/people/dick7'
+    - type: 'douban'
+      link: 'https://www.douban.com/people/168395085/'
+    - type: 'jianshu'
+      link: 'https://www.jianshu.com/u/cfae97b3b879'
+    - type: 'alipay'
+      link: 'https://my.alipay.com/portal/i.htm'
+    - type: 'taobao'
+      link: 'https://i.taobao.com/'
+    - type: 'qq'
+      link: 'https://im.qq.com/549119612'
+    - type: 'baidu'
+      link: 'http://i.baidu.com/'
+    - type: 'lofter'
+      link: 'https://qichangyu123456789.lofter.com/'
+    - type: 'sina'
+      link: 'https://weibo.com/u/6054906548/home?wvr=5'
+    - type: 'new-realm'
+      link: 'http://blog.new-realm.cn/'
+    - type: 'ztloadfield'
+      link: 'http://dev.ztloadfield.com/'
   manifest: 'manifest.webmanifest'
 
 # google_analytics:
