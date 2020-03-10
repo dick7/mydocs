@@ -3,7 +3,7 @@ site_name: mydocs-MkDocs
 nav:
     - Home: index.md
     - MkDocs: mkdocs.md
-    - Fields: felds.md 
+    - Fields:  
       - Geo: geo.md 
       - Phisics: phisics.md
       - Auto-Control: control.md
