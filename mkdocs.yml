@@ -3,7 +3,13 @@ site_name: mydocs-MkDocs
 nav:
     - Home: index.md
     - MkDocs: mkdocs.md
-    - Fields: fields.md
+    - Fields: felds.md 
+      - Geo: geo.md 
+      - Phisics: phisics.md
+      - Auto-Control: control.md
+      - Medical: medical.md
+      - VR/AR/AI/DL/ML: v.md
+      - Behavior/Learning/Teaching: blt.md
     - Imgs: imgs.md
     - Links: links.md
     - Sci:
