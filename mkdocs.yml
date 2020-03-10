@@ -6,22 +6,24 @@ nav:
     - Fields: fields.md
     - Imgs: imgs.md
     - Links: links.md
-    - Jupyter: jupyter.md
-    - R: R.md
-    - M: M.md
-    - C: c.md
+    - Sci:
+      - Jupyter: jupyter.md
+      - M: M.md
+      - R: R.md
+      - C: c.md
+      - F: F.md
+      - Latex: latex.md
     - Markdown: markdown.md
-    - Yaml: 
+    - Yaml-Travis CI: 
       - mydocs yaml: mydocs-yaml.md
       - yaml intro: yaml.md
-    - Travis CI: 
       - Intro: travis.md 
       - Use: travis-1.md
     - SSH: ssh.md
     - Git/Github: git.md
     - Vi/Vim: vim.md
-    - Apt/pip/yum: apt.md
     - Linux/Shell: 
+      - Apt/pip/yum: apt.md
       - linux commands: linux-cmds.md
       - linux shell: linux-shell.md
     - Nginx: nginx.md
@@ -29,12 +31,13 @@ nav:
       - MySQL: dbs/mysql.md
       - Mongo: dbs/mongo.md
     - Python: 
-      - basic: python.md
-      - apply: bt.md
-    - Django: django.md
-    - Flask: flask.md
+      - Basic: python.md
+      - DevOps: bt.md
+      - Scrapy: scrapy.md
+      - Django: django.md
+      - Flask: flask.md
     - Cheat-Sheets: cheat-sheets.md
-    - Nat: frp.md
+    - NAT: frp.md
     - Diary-2020-3: 
         - Test: diaries/0.md
         - First day: diaries/20200303.md
