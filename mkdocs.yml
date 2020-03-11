@@ -36,6 +36,7 @@ nav:
       - KVM: kvm.md
     - Nginx: nginx.md
     - Databases:
+      - Sqlite: dbs/sqlite3.md
       - MySQL: dbs/mysql.md
       - Mongo: dbs/mongo.md
     - Python: 
@@ -48,6 +49,19 @@ nav:
       - frp.md
       - openwrt.md
       - zerotieone.md
+    - Fore end:
+        - html.md
+        - xml.md
+        - json.md
+        - js.md
+        - jquery.md
+        - ajax.md
+        - Frame:
+          - bootstrap.md
+          - layui.md
+    - Back end:
+        - xadmin.md
+
     - Diary-2020-3: 
         - Test: diaries/0.md
         - First day: diaries/20200303.md
