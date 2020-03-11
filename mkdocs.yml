@@ -30,20 +30,24 @@ nav:
     - Vi/Vim: vim.md
     - Linux/Shell: 
       - Apt/pip/yum: apt.md
-      - linux commands: linux-cmds.md
-      - linux shell: linux-shell.md
+      - Linux commands: linux-cmds.md
+      - Linux shell: linux-shell.md
+      - DevOps: bt.md
+      - KVM: kvm.md
     - Nginx: nginx.md
     - Databases:
       - MySQL: dbs/mysql.md
       - Mongo: dbs/mongo.md
     - Python: 
       - Basic: python.md
-      - DevOps: bt.md
       - Scrapy: scrapy.md
       - Django: django.md
       - Flask: flask.md
     - Cheat-Sheets: cheat-sheets.md
-    - NAT: frp.md
+    - NAT: 
+      - frp.md
+      - openwrt.md
+      - zerotieone.md
     - Diary-2020-3: 
         - Test: diaries/0.md
         - First day: diaries/20200303.md
