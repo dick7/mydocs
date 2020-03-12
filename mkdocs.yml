@@ -2,73 +2,76 @@ site_name: mydocs-MkDocs
 
 nav:
     - Home: index.md
-    - MkDocs: mkdocs.md
+    - MkDocs: 
+      - mkdocs/mkdocs.md
+      - mkdocs/markdown.md
     - Fields:  
-      - Geo: geo.md 
-      - Phisics: phisics.md
-      - Auto-Control: control.md
-      - Medical: medical.md
-      - VR/AR/AI/DL/ML: v.md
-      - Behavior/Learning/Teaching: blt.md
+      - Geo: fields/geo.md
+      - Phisics: fields/phisics.md
+      - Auto-Control: fields/control.md
+      - Medical: fields/medical.md
+      - Algorithms and Data Structure: fields/algorithms.md
+      - VR/AR/AI/DL/ML: fields/v.md
+      - Behavior/Learning/Teaching: fields/blt.md
     - Imgs: imgs.md
     - Links: links.md
-    - Sci:
-      - Jupyter: jupyter.md
-      - M: M.md
-      - R: R.md
-      - Latex: latex.md
+    - Sci tools:
+      - Jupyter: sci-tools/jupyter.md
+      - M: sci-tools/M.md
+      - R: sci-tools/R.md
+      - Latex: sci-tools/latex.md
     - Program Languages:
-      - C: C.md
-      - F: F.md
-      - J: Java.md
-    - Markdown: markdown.md
+      - P: python/python.md
+      - C: program-languages/C.md
+      - F: program-languages/F.md
+      - J: program-languages/Java.md
     - Yaml-Travis CI: 
-      - mydocs yaml: mydocs-yaml.md
-      - yaml intro: yaml.md
-      - Intro: travis.md 
-      - Use: travis-1.md
-    - SSH: ssh.md
-    - Git/Github: git.md
-    - Vi/Vim: vim.md
-    - Linux/Shell: 
-      - Apt/pip/yum: apt.md
-      - Linux commands: linux-cmds.md
-      - Linux shell: linux-shell.md
-      - DevOps: bt.md
-      - KVM: kvm.md
-    - Nginx: nginx.md
+      - mydocs yaml: yaml-travis/mydocs-yaml.md
+      - yaml intro: yaml-travis/yaml.md
+      - Intro: yaml-travis/travis.md 
+      - Use: yaml-travis/travis-1.md
+    - Git-Github: git.md
+    - SSH: server/ssh.md
+    - Vim: server/vim.md
+    - Linux-Shell: 
+      - Apt-pip-yum: server/apt.md
+      - Linux commands: server/linux-cmds.md
+      - Linux shell: server/linux-shell.md
+      - DevOps: server/bt.md
+      - KVM: server/kvm.md
+    - Nginx: server/nginx.md
     - Databases:
       - Sqlite: dbs/sqlite3.md
       - MySQL: dbs/mysql.md
       - Mongo: dbs/mongo.md
     - Python:  
-      - Basic: python.md
-      - Scrapy: scrapy.md
-      - &pyFrame Frame: 
-        - Django: django.md
-        - Flask: flask.md
+      - Basic: python/python.md
+      - Scrapy: python/scrapy.md
+      - Frame:
+        - Django: python/django.md
+        - Flask: python/flask.md
     - Cheat-Sheets: cheat-sheets.md
     - NAT: 
-      - frp.md
-      - openwrt.md
-      - zerotieone.md
-    - Fore end:
-        - html.md
-        - css.md
-        - json.md
-        - js.md
-        - jquery.md
-        - ajax.md
-        - Frame:
-          - bootstrap.md
-          - layui.md
-          - xadmin.md
+      - nat/frp.md
+      - nat/openwrt.md
+      - nat/zerotieone.md
+    - Front-end:
+      - front-end/html.md
+      - front-end/css.md
+      - front-end/json.md
+      - front-end/js.md
+      - front-end/jquery.md
+      - front-end/ajax.md
+      - Frame:
+        - front-end/bootstrap.md
+        - front-end/layui.md
+        - front-end/xadmin.md
     - Back end:
-        - XML: xml.md
-        - SOAP: soap.md
-          #- <<: *pyFrame
-        - *pyFrame
-        - Tornado: tornado.md
+      - XML: back-end/xml.md
+      - SOAP: back-end/soap.md
+      - Django: python/django.md
+      - Flask: python/flask.md
+      - Tornado: python/tornado.md
 
     - Diary-2020-3: 
         - Test: diaries/0.md

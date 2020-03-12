@@ -6,7 +6,7 @@
 
 ## 2. vim 键盘图：
 
-- ![vim:keymap](imgs/vi-vim-cheat-sheet-sch.gif)
+- ![vim:keymap](../imgs/vi-vim-cheat-sheet-sch.gif)
 
 ## 3. vi/vim 的使用
 
@@ -57,7 +57,7 @@
 
 简单的说，我们可以将这三个模式想成底下的图标来表示：
 
-![vim:workmodel](imgs/vim-vi-workmodel.png)
+![vim:workmodel](../imgs/vim-vi-workmodel.png)
 
 ## 4. vi/vim 使用实例
 
