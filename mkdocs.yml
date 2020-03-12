@@ -5,6 +5,8 @@ nav:
     - MkDocs: 
       - mkdocs/mkdocs.md
       - mkdocs/markdown.md
+    - Imgs: imgs.md
+    - Links: links.md
     - Fields:  
       - Geo: fields/geo.md
       - Phisics: fields/phisics.md
@@ -13,8 +15,6 @@ nav:
       - Algorithms and Data Structure: fields/algorithms.md
       - VR/AR/AI/DL/ML: fields/v.md
       - Behavior/Learning/Teaching: fields/blt.md
-    - Imgs: imgs.md
-    - Links: links.md
     - Sci tools:
       - Jupyter: sci-tools/jupyter.md
       - M: sci-tools/M.md
@@ -25,15 +25,15 @@ nav:
       - C: program-languages/C.md
       - F: program-languages/F.md
       - J: program-languages/Java.md
-    - Yaml-Travis CI: 
+    - Yaml Travis-CI: 
       - mydocs yaml: yaml-travis/mydocs-yaml.md
       - yaml intro: yaml-travis/yaml.md
       - Intro: yaml-travis/travis.md 
       - Use: yaml-travis/travis-1.md
-    - Git-Github: git.md
+    - Git Github: git.md
     - SSH: server/ssh.md
     - Vim: server/vim.md
-    - Linux-Shell: 
+    - Linux Shell: 
       - Apt-pip-yum: server/apt.md
       - Linux commands: server/linux-cmds.md
       - Linux shell: server/linux-shell.md
@@ -50,12 +50,13 @@ nav:
       - Frame:
         - Django: python/django.md
         - Flask: python/flask.md
-    - Cheat-Sheets: cheat-sheets.md
-    - NAT: 
-      - nat/frp.md
-      - nat/openwrt.md
-      - nat/zerotieone.md
-    - Front-end:
+    - Back end:
+      - XML: back-end/xml.md
+      - SOAP: back-end/soap.md
+      - Django: python/django.md
+      - Flask: python/flask.md
+      - Tornado: python/tornado.md
+    - Front end:
       - front-end/html.md
       - front-end/css.md
       - front-end/json.md
@@ -66,13 +67,11 @@ nav:
         - front-end/bootstrap.md
         - front-end/layui.md
         - front-end/xadmin.md
-    - Back end:
-      - XML: back-end/xml.md
-      - SOAP: back-end/soap.md
-      - Django: python/django.md
-      - Flask: python/flask.md
-      - Tornado: python/tornado.md
-
+    - NAT: 
+      - nat/frp.md
+      - nat/openwrt.md
+      - nat/zerotieone.md
+    - Cheat-Sheets: cheat-sheets.md
     - Diary-2020-3: 
         - Test: diaries/0.md
         - First day: diaries/20200303.md
@@ -110,7 +109,6 @@ plugins:
   - search
   - git-revision-date-localized:
       type: iso_datetime
-
 
 # uncomment under line to use the "readthedocs" theme
 # theme: readthedocs
