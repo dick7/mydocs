@@ -17,10 +17,10 @@ nav:
       - M: M.md
       - R: R.md
       - Latex: latex.md
-    - Lan:
-      - C: c.md
-      - F: f.md
-      - J: java.md
+    - Program Languages:
+      - C: C.md
+      - F: F.md
+      - J: Java.md
     - Markdown: markdown.md
     - Yaml-Travis CI: 
       - mydocs yaml: mydocs-yaml.md
@@ -44,7 +44,7 @@ nav:
     - Python:  
       - Basic: python.md
       - Scrapy: scrapy.md
-      - Frame: &pyFrame
+      - &pyFrame Frame: 
         - Django: django.md
         - Flask: flask.md
     - Cheat-Sheets: cheat-sheets.md
@@ -64,9 +64,10 @@ nav:
           - layui.md
           - xadmin.md
     - Back end:
-        - xml.md
+        - XML: xml.md
         - SOAP: soap.md
-        <<: *pyFrame
+          #- <<: *pyFrame
+        - *pyFrame
         - Tornado: tornado.md
 
     - Diary-2020-3: 

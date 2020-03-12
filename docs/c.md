@@ -1,6 +1,6 @@
-# c
+# C
 
-> c programe language
+> C programe language
 
 ```c
 #include<stdio.h>
@@ -10,3 +10,4 @@ int main(){
     return 0;
 }
 ```
+
