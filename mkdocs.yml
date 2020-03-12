@@ -16,9 +16,11 @@ nav:
       - Jupyter: jupyter.md
       - M: M.md
       - R: R.md
-      - C: c.md
-      - F: F.md
       - Latex: latex.md
+    - Lan:
+      - C: c.md
+      - F: f.md
+      - J: java.md
     - Markdown: markdown.md
     - Yaml-Travis CI: 
       - mydocs yaml: mydocs-yaml.md
@@ -39,11 +41,12 @@ nav:
       - Sqlite: dbs/sqlite3.md
       - MySQL: dbs/mysql.md
       - Mongo: dbs/mongo.md
-    - Python: 
+    - Python:  
       - Basic: python.md
       - Scrapy: scrapy.md
-      - Django: django.md
-      - Flask: flask.md
+      - Frame: &pyFrame
+        - Django: django.md
+        - Flask: flask.md
     - Cheat-Sheets: cheat-sheets.md
     - NAT: 
       - frp.md
@@ -51,7 +54,7 @@ nav:
       - zerotieone.md
     - Fore end:
         - html.md
-        - xml.md
+        - css.md
         - json.md
         - js.md
         - jquery.md
@@ -59,8 +62,12 @@ nav:
         - Frame:
           - bootstrap.md
           - layui.md
+          - xadmin.md
     - Back end:
-        - xadmin.md
+        - xml.md
+        - SOAP: soap.md
+        <<: *pyFrame
+        - Tornado: tornado.md
 
     - Diary-2020-3: 
         - Test: diaries/0.md
@@ -90,7 +97,6 @@ markdown_extensions:
   - codehilite
   - toc:
       permalink: true
-
 
 # add plugins
 plugins:
