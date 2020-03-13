@@ -1,4 +1,6 @@
-# Jupyter-Book Writing Books With Jupyter-Notebook
+# Jupyter-Book 
+
+> Writing Books With Jupyter-Notebook
 
 Start.
 
@@ -86,7 +88,7 @@ The `yml` markup structure of the book.
 ## 4.Build
 
 ```
-jupyter-book build mybookname
+jupyter-book build myJupyter-book
 ```
 To generate `Markdown` files being used by `Jekyll`.
 
