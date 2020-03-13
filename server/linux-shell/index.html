@@ -1,0 +1,272 @@
+<!doctype html><html lang=en class=no-js> <head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><meta name=lang:clipboard.copy content="Copy to clipboard"><meta name=lang:clipboard.copied content="Copied to clipboard"><meta name=lang:search.language content=en><meta name=lang:search.pipeline.stopwords content=True><meta name=lang:search.pipeline.trimmer content=True><meta name=lang:search.result.none content="No matching documents"><meta name=lang:search.result.one content="1 matching document"><meta name=lang:search.result.other content="# matching documents"><meta name=lang:search.tokenizer content=[\s\-\.]+><link rel="shortcut icon" href=../../assets/images/favicon.png><meta name=generator content="mkdocs-1.1, mkdocs-material-4.6.3"><title>Linux shell - mydocs-MkDocs</title><link rel=stylesheet href=../../assets/stylesheets/application.adb8469c.css><link rel=stylesheet href=../../assets/stylesheets/application-palette.a8b3c06d.css><meta name=theme-color content=#4caf50><script src=../../assets/javascripts/modernizr.86422ebf.js></script><link href=https://fonts.gstatic.com rel=preconnect crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700%7CConsolas&display=fallback"><style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Consolas","Courier New",Courier,monospace}</style><link rel=stylesheet href=../../assets/fonts/material-icons.css><link rel=manifest type=application/manifest+json href=../../manifest.webmanifest crossorigin=use-credentials></head> <body dir=ltr data-md-color-primary=green data-md-color-accent=green> <svg class=md-svg> <defs> <svg xmlns=http://www.w3.org/2000/svg width=416 height=448 viewbox="0 0 416 448" id=__github><path fill=currentColor d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg> </defs> </svg> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay data-md-component=overlay for=__drawer></label> <a href=#linux tabindex=0 class=md-skip> Skip to content </a> <header class=md-header data-md-component=header> <nav class="md-header-nav md-grid"> <div class=md-flex> <div class="md-flex__cell md-flex__cell--shrink"> <a href=../.. title=mydocs-MkDocs aria-label=mydocs-MkDocs class="md-header-nav__button md-logo"> <img alt=logo src=../../imgs/ico-head.jpg width=24 height=24> </a> </div> <div class="md-flex__cell md-flex__cell--shrink"> <label class="md-icon md-icon--menu md-header-nav__button" for=__drawer></label> </div> <div class="md-flex__cell md-flex__cell--stretch"> <div class="md-flex__ellipsis md-header-nav__title" data-md-component=title> <span class=md-header-nav__topic> mydocs-MkDocs </span> <span class=md-header-nav__topic> Linux shell </span> </div> </div> <div class="md-flex__cell md-flex__cell--shrink"> <label class="md-icon md-icon--search md-header-nav__button" for=__search></label> <div class=md-search data-md-component=search role=dialog> <label class=md-search__overlay for=__search></label> <div class=md-search__inner role=search> <form class=md-search__form name=search> <input type=text class=md-search__input aria-label=search name=query placeholder=Search autocapitalize=off autocorrect=off autocomplete=off spellcheck=false data-md-component=query data-md-state=active> <label class="md-icon md-search__icon" for=__search></label> <button type=reset class="md-icon md-search__icon" data-md-component=reset tabindex=-1> &#xE5CD; </button> </form> <div class=md-search__output> <div class=md-search__scrollwrap data-md-scrollfix> <div class=md-search-result data-md-component=result> <div class=md-search-result__meta> Type to start searching </div> <ol class=md-search-result__list></ol> </div> </div> </div> </div> </div> </div> <div class="md-flex__cell md-flex__cell--shrink"> <div class=md-header-nav__source> <a href=https://github.com/dick7/mydocs/ title="Go to repository" class=md-source data-md-source=github> <div class=md-source__icon> <svg viewbox="0 0 24 24" width=24 height=24> <use xlink:href=#__github width=24 height=24></use> </svg> </div> <div class=md-source__repository> dick7/mydocs </div> </a> </div> </div> </div> </nav> </header> <div class=md-container> <main class=md-main role=main> <div class="md-main__inner md-grid" data-md-component=container> <div class="md-sidebar md-sidebar--primary" data-md-component=navigation> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--primary" data-md-level=0> <label class="md-nav__title md-nav__title--site" for=__drawer> <a href=../.. title=mydocs-MkDocs class="md-nav__button md-logo"> <img alt=logo src=../../imgs/ico-head.jpg width=48 height=48> </a> mydocs-MkDocs </label> <div class=md-nav__source> <a href=https://github.com/dick7/mydocs/ title="Go to repository" class=md-source data-md-source=github> <div class=md-source__icon> <svg viewbox="0 0 24 24" width=24 height=24> <use xlink:href=#__github width=24 height=24></use> </svg> </div> <div class=md-source__repository> dick7/mydocs </div> </a> </div> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../.. title=Home class=md-nav__link> Home </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-toggle md-nav__toggle" data-md-toggle=nav-2 type=checkbox id=nav-2> <label class=md-nav__link for=nav-2> MkDocs </label> <nav class=md-nav data-md-component=collapsible data-md-level=1> <label class=md-nav__title for=nav-2> MkDocs </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../mkdocs/mkdocs/ title=MkDocs class=md-nav__link> MkDocs </a> </li> <li class=md-nav__item> <a href=../../mkdocs/markdown/ title="Markdown Guide" class=md-nav__link> Markdown Guide </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../../imgs/ title=Imgs class=md-nav__link> Imgs </a> </li> <li class=md-nav__item> <a href=../../links/ title=Links class=md-nav__link> Links </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-toggle md-nav__toggle" data-md-toggle=nav-5 type=checkbox id=nav-5> <label class=md-nav__link for=nav-5> Fields </label> <nav class=md-nav data-md-component=collapsible data-md-level=1> <label class=md-nav__title for=nav-5> Fields </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../fields/geo/ title=Geo class=md-nav__link> Geo </a> </li> <li class=md-nav__item> <a href=../../fields/phisics/ title=Phisics class=md-nav__link> Phisics </a> </li> <li class=md-nav__item> <a href=../../fields/control/ title=Auto-Control class=md-nav__link> Auto-Control </a> </li> <li class=md-nav__item> <a href=../../fields/medical/ title=Medical class=md-nav__link> Medical </a> </li> <li class=md-nav__item> <a href=../../fields/algorithms/ title="Algorithms and Data Structure" class=md-nav__link> Algorithms and Data Structure </a> </li> <li class=md-nav__item> <a href=../../fields/v/ title=VR/AR/AI/DL/ML class=md-nav__link> VR/AR/AI/DL/ML </a> </li> <li class=md-nav__item> <a href=../../fields/blt/ title=Behavior/Learning/Teaching class=md-nav__link> Behavior/Learning/Teaching </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-toggle md-nav__toggle" data-md-toggle=nav-6 type=checkbox id=nav-6> <label class=md-nav__link for=nav-6> Sci tools </label> <nav class=md-nav data-md-component=collapsible data-md-level=1> <label class=md-nav__title for=nav-6> Sci tools </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../sci-tools/jupyter/ title=Jupyter class=md-nav__link> Jupyter </a> </li> <li class=md-nav__item> <a href=../../sci-tools/M/ title=M class=md-nav__link> M </a> </li> <li class=md-nav__item> <a href=../../sci-tools/R/ title=R class=md-nav__link> R </a> </li> <li class=md-nav__item> <a href=../../sci-tools/latex/ title=Latex class=md-nav__link> Latex </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-toggle md-nav__toggle" data-md-toggle=nav-7 type=checkbox id=nav-7> <label class=md-nav__link for=nav-7> Program Languages </label> <nav class=md-nav data-md-component=collapsible data-md-level=1> <label class=md-nav__title for=nav-7> Program Languages </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../python/python/ title=P class=md-nav__link> P </a> </li> <li class=md-nav__item> <a href=../../program-languages/C/ title=C class=md-nav__link> C </a> </li> <li class=md-nav__item> <a href=../../program-languages/F/ title=F class=md-nav__link> F </a> </li> <li class=md-nav__item> <a href=../../program-languages/Java/ title=J class=md-nav__link> J </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-toggle md-nav__toggle" data-md-toggle=nav-8 type=checkbox id=nav-8> <label class=md-nav__link for=nav-8> Yaml Travis-CI </label> <nav class=md-nav data-md-component=collapsible data-md-level=1> <label class=md-nav__title for=nav-8> Yaml Travis-CI </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../yaml-travis/mydocs-yaml/ title="mydocs yaml" class=md-nav__link> mydocs yaml </a> </li> <li class=md-nav__item> <a href=../../yaml-travis/yaml/ title="yaml intro" class=md-nav__link> yaml intro </a> </li> <li class=md-nav__item> <a href=../../yaml-travis/travis/ title=Intro class=md-nav__link> Intro </a> </li> <li class=md-nav__item> <a href=../../yaml-travis/travis-1/ title=Use class=md-nav__link> Use </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../../git/ title="Git Github" class=md-nav__link> Git Github </a> </li> <li class=md-nav__item> <a href=../ssh/ title=SSH class=md-nav__link> SSH </a> </li> <li class=md-nav__item> <a href=../vim/ title=Vim class=md-nav__link> Vim </a> </li> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-toggle md-nav__toggle" data-md-toggle=nav-12 type=checkbox id=nav-12 checked> <label class=md-nav__link for=nav-12> Linux Shell </label> <nav class=md-nav data-md-component=collapsible data-md-level=1> <label class=md-nav__title for=nav-12> Linux Shell </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../apt/ title=Apt-pip-yum class=md-nav__link> Apt-pip-yum </a> </li> <li class=md-nav__item> <a href=../linux-cmds/ title="Linux commands" class=md-nav__link> Linux commands </a> </li> <li class="md-nav__item md-nav__item--active"> <input class="md-toggle md-nav__toggle" data-md-toggle=toc type=checkbox id=__toc> <label class="md-nav__link md-nav__link--active" for=__toc> Linux shell </label> <a href=./ title="Linux shell" class="md-nav__link md-nav__link--active"> Linux shell </a> <nav class="md-nav md-nav--secondary"> <label class=md-nav__title for=__toc>Table of contents</label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=#1sed-grep class=md-nav__link> 1.sed-grep </a> <nav class=md-nav> <ul class=md-nav__list> <li class=md-nav__item> <a href=#_1 class=md-nav__link> 语法格式 </a> </li> <li class=md-nav__item> <a href=#_2 class=md-nav__link> 实例 </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#2git-webhook class=md-nav__link> 2.git webhook </a> </li> <li class=md-nav__item> <a href=#3file-operation class=md-nav__link> 3.File Operation </a> <nav class=md-nav> <ul class=md-nav__list> <li class=md-nav__item> <a href=#31-iffortestarraycaseesacstring class=md-nav__link> 3.1 if/for/test/array/case...esac/$#/string </a> </li> <li class=md-nav__item> <a href=#32-if-gt-e class=md-nav__link> 3.2 if/$#/-gt/-e.../|| </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#4scp class=md-nav__link> 4.scp </a> </li> <li class=md-nav__item> <a href=#5rsync class=md-nav__link> 5.rsync </a> </li> <li class=md-nav__item> <a href=#6connect-mysql class=md-nav__link> 6.connect mysql </a> </li> <li class=md-nav__item> <a href=#7kill-ps class=md-nav__link> 7.kill ps </a> </li> <li class=md-nav__item> <a href=#8pause class=md-nav__link> 8.pause </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../bt/ title=DevOps class=md-nav__link> DevOps </a> </li> <li class=md-nav__item> <a href=../kvm/ title=KVM class=md-nav__link> KVM </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../nginx/ title=Nginx class=md-nav__link> Nginx </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-toggle md-nav__toggle" data-md-toggle=nav-14 type=checkbox id=nav-14> <label class=md-nav__link for=nav-14> Databases </label> <nav class=md-nav data-md-component=collapsible data-md-level=1> <label class=md-nav__title for=nav-14> Databases </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../dbs/sqlite3/ title=Sqlite class=md-nav__link> Sqlite </a> </li> <li class=md-nav__item> <a href=../../dbs/mysql/ title=MySQL class=md-nav__link> MySQL </a> </li> <li class=md-nav__item> <a href=../../dbs/mongo/ title=Mongo class=md-nav__link> Mongo </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-toggle md-nav__toggle" data-md-toggle=nav-15 type=checkbox id=nav-15> <label class=md-nav__link for=nav-15> Python </label> <nav class=md-nav data-md-component=collapsible data-md-level=1> <label class=md-nav__title for=nav-15> Python </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../python/python/ title=Basic class=md-nav__link> Basic </a> </li> <li class=md-nav__item> <a href=../../python/scrapy/ title=Scrapy class=md-nav__link> Scrapy </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-toggle md-nav__toggle" data-md-toggle=nav-15-3 type=checkbox id=nav-15-3> <label class=md-nav__link for=nav-15-3> Frame </label> <nav class=md-nav data-md-component=collapsible data-md-level=2> <label class=md-nav__title for=nav-15-3> Frame </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../python/django/ title=Django class=md-nav__link> Django </a> </li> <li class=md-nav__item> <a href=../../python/flask/ title=Flask class=md-nav__link> Flask </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-toggle md-nav__toggle" data-md-toggle=nav-16 type=checkbox id=nav-16> <label class=md-nav__link for=nav-16> Back end </label> <nav class=md-nav data-md-component=collapsible data-md-level=1> <label class=md-nav__title for=nav-16> Back end </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../back-end/xml/ title=XML class=md-nav__link> XML </a> </li> <li class=md-nav__item> <a href=../../back-end/soap/ title=SOAP class=md-nav__link> SOAP </a> </li> <li class=md-nav__item> <a href=../../python/django/ title=Django class=md-nav__link> Django </a> </li> <li class=md-nav__item> <a href=../../python/flask/ title=Flask class=md-nav__link> Flask </a> </li> <li class=md-nav__item> <a href=../../python/tornado/ title=Tornado class=md-nav__link> Tornado </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-toggle md-nav__toggle" data-md-toggle=nav-17 type=checkbox id=nav-17> <label class=md-nav__link for=nav-17> Front end </label> <nav class=md-nav data-md-component=collapsible data-md-level=1> <label class=md-nav__title for=nav-17> Front end </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../front-end/html/ title=HTML class=md-nav__link> HTML </a> </li> <li class=md-nav__item> <a href=../../front-end/css/ title=CSS class=md-nav__link> CSS </a> </li> <li class=md-nav__item> <a href=../../front-end/json/ title=JSON class=md-nav__link> JSON </a> </li> <li class=md-nav__item> <a href=../../front-end/js/ title=JS class=md-nav__link> JS </a> </li> <li class=md-nav__item> <a href=../../front-end/jquery/ title=JQUERY class=md-nav__link> JQUERY </a> </li> <li class=md-nav__item> <a href=../../front-end/ajax/ title=AJAX class=md-nav__link> AJAX </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-toggle md-nav__toggle" data-md-toggle=nav-17-7 type=checkbox id=nav-17-7> <label class=md-nav__link for=nav-17-7> Frame </label> <nav class=md-nav data-md-component=collapsible data-md-level=2> <label class=md-nav__title for=nav-17-7> Frame </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../front-end/bootstrap/ title=BOOTSTRAP class=md-nav__link> BOOTSTRAP </a> </li> <li class=md-nav__item> <a href=../../front-end/layui/ title=LayUI class=md-nav__link> LayUI </a> </li> <li class=md-nav__item> <a href=../../front-end/xadmin/ title=Xadmin class=md-nav__link> Xadmin </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-toggle md-nav__toggle" data-md-toggle=nav-18 type=checkbox id=nav-18> <label class=md-nav__link for=nav-18> NAT </label> <nav class=md-nav data-md-component=collapsible data-md-level=1> <label class=md-nav__title for=nav-18> NAT </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../nat/frp/ title=frp class=md-nav__link> frp </a> </li> <li class=md-nav__item> <a href=../../nat/openwrt/ title=OpenWrt class=md-nav__link> OpenWrt </a> </li> <li class=md-nav__item> <a href=../../nat/zerotieone/ title=ZeroTieOne class=md-nav__link> ZeroTieOne </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../../cheat-sheets/ title=Cheat-Sheets class=md-nav__link> Cheat-Sheets </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-toggle md-nav__toggle" data-md-toggle=nav-20 type=checkbox id=nav-20> <label class=md-nav__link for=nav-20> Diary-2020-3 </label> <nav class=md-nav data-md-component=collapsible data-md-level=1> <label class=md-nav__title for=nav-20> Diary-2020-3 </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../diaries/0/ title=Test class=md-nav__link> Test </a> </li> <li class=md-nav__item> <a href=../../diaries/20200303/ title="First day" class=md-nav__link> First day </a> </li> <li class=md-nav__item> <a href=../../diaries/4/ title="Second day" class=md-nav__link> Second day </a> </li> </ul> </nav> </li> </ul> </nav> </div> </div> </div> <div class="md-sidebar md-sidebar--secondary" data-md-component=toc> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--secondary"> <label class=md-nav__title for=__toc>Table of contents</label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=#1sed-grep class=md-nav__link> 1.sed-grep </a> <nav class=md-nav> <ul class=md-nav__list> <li class=md-nav__item> <a href=#_1 class=md-nav__link> 语法格式 </a> </li> <li class=md-nav__item> <a href=#_2 class=md-nav__link> 实例 </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#2git-webhook class=md-nav__link> 2.git webhook </a> </li> <li class=md-nav__item> <a href=#3file-operation class=md-nav__link> 3.File Operation </a> <nav class=md-nav> <ul class=md-nav__list> <li class=md-nav__item> <a href=#31-iffortestarraycaseesacstring class=md-nav__link> 3.1 if/for/test/array/case...esac/$#/string </a> </li> <li class=md-nav__item> <a href=#32-if-gt-e class=md-nav__link> 3.2 if/$#/-gt/-e.../|| </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#4scp class=md-nav__link> 4.scp </a> </li> <li class=md-nav__item> <a href=#5rsync class=md-nav__link> 5.rsync </a> </li> <li class=md-nav__item> <a href=#6connect-mysql class=md-nav__link> 6.connect mysql </a> </li> <li class=md-nav__item> <a href=#7kill-ps class=md-nav__link> 7.kill ps </a> </li> <li class=md-nav__item> <a href=#8pause class=md-nav__link> 8.pause </a> </li> </ul> </nav> </div> </div> </div> <div class=md-content> <article class="md-content__inner md-typeset"> <a href=https://github.com/dick7/mydocs/edit/master/docs/server/linux-shell.md title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a> <h1 id=linux>Linux<a class=headerlink href=#linux title="Permanent link">&para;</a></h1> <h2 id=1sed-grep>1.sed-grep<a class=headerlink href=#1sed-grep title="Permanent link">&para;</a></h2> <p><code class=codehilite><span class=err>sed-grep.sh</span></code> <div class=codehilite><pre><span></span><code><span class=err>sed -i &quot;s/vim_runtime/vim/g&quot; `grep &quot;vim_runtime&quot; -rl ./README.md`</span>
+</code></pre></div> 经常要使用到 Linux 的批量查找与替换，这里我们为大家介绍使用 sed 命令来实现查找文件中的内容并替换。</p> <h3 id=_1>语法格式<a class=headerlink href=#_1 title="Permanent link">&para;</a></h3> <div class=codehilite><pre><span></span><code><span class=err>sed -i &quot;s/原字符串/新字符串/g&quot; `grep 原字符串 -rl 所在目录`</span>
+</code></pre></div> <h3 id=_2>实例<a class=headerlink href=#_2 title="Permanent link">&para;</a></h3> <p>以下我们实现在当前目录下查找包含 "1" 的字符串，并将字符串 "1" 替换为 "PARAM"，执行命令： <div class=codehilite><pre><span></span><code><span class=err>sed -i &quot;s/1/PARAM/g&quot; `grep &quot;1&quot; -rl ./test-webhook.sh`</span>
+</code></pre></div> 接下来使用一个更复杂实例，批量替换网址 baidu.com 为 ztloadfield.com： <div class=codehilite><pre><span></span><code><span class=err>sed -i &quot;s/https:\/\/baidu.com/https:\/\/ztloadfield.com/g&quot; `grep -rl &quot;baidu.com&quot; ./`</span>
+<span class=err>----------------^-^-----------------^-^--------------------------------------------</span>
+<span class=err>**注意：插入 &#39;\&#39;的位置，其他位置不变。**</span>
+</code></pre></div></p> <h2 id=2git-webhook>2.git webhook<a class=headerlink href=#2git-webhook title="Permanent link">&para;</a></h2> <p>ref:<a href=https://blog.csdn.net/qq_40995752/article/details/89467931><em>webhook.sh</em></a></p> <p>Here is mine: </p> <p><code class=codehilite><span class=err>mywebhook.sh</span></code></p> <div class=codehilite><pre><span></span><code><span class=ch>#!/bin/bash</span>
+wc -l <span class=s>&lt;&lt; EOF</span>
+<span class=s>mywebhook.sh control hooks to github</span>
+<span class=s>Author:dick7</span>
+<span class=s>Date:20200307</span>
+<span class=s>Config sample:</span>
+<span class=s>[must]</span>
+<span class=s>project=YOUR_PROJECT</span>
+<span class=s>CD=WWW_ROOT</span>
+<span class=s>[option-default]</span>
+<span class=s>access_key=&#39;KjL3aQB6mvapcokPhOuWJ6NLPACa5QYVZzY1cRtjEp2s3as0&#39;</span>
+<span class=s>git_server=&#39;https://github.com&#39;</span>
+<span class=s>git_user=&#39;dick7&#39;</span>
+<span class=s>EOF</span>
+
+<span class=nb>echo</span> <span class=s2>&quot;Some (&#39;push&#39;) event(s) makes webhook start!&quot;</span>
+<span class=nb>echo</span> <span class=s2>&quot;-------------------Start-------------------&quot;</span>
+date --date<span class=o>=</span><span class=s1>&#39;0 days ago&#39;</span> <span class=s2>&quot;+%Y-%m-%d %H:%M:%S&quot;</span>
+
+<span class=nv>project</span><span class=o>=</span><span class=nv>$1</span>
+<span class=c1># echo &quot;&#39;project=$project&#39;is the project name on GitHub(git server).&quot;</span>
+<span class=nv>CD</span><span class=o>=</span><span class=nv>$2</span>
+<span class=c1># echo &quot;&#39;CD=$CD&#39;is the path to clone.&quot;</span>
+<span class=nv>access_key</span><span class=o>=</span><span class=s1>&#39;KjL3aQB6mvapcokPhOuWJ6NLPACa5QYVZzY1cRtjEp2s3as0&#39;</span>
+<span class=nv>git_server</span><span class=o>=</span><span class=s1>&#39;https://github.com&#39;</span>
+<span class=nv>git_user</span><span class=o>=</span><span class=s1>&#39;dick7&#39;</span>
+
+<span class=k>if</span> <span class=o>[</span> ! -n <span class=s2>&quot;</span><span class=nv>$project</span><span class=s2>&quot;</span> <span class=o>]</span><span class=p>;</span><span class=k>then</span>
+    <span class=nb>echo</span> <span class=s2>&quot;project=</span><span class=nv>$project</span><span class=s2> is NULL!&quot;</span>
+    <span class=nb>echo</span> <span class=s2>&quot;--------------------End--------------------&quot;</span>
+    <span class=nb>exit</span>
+<span class=k>fi</span>
+<span class=k>if</span> <span class=o>[</span> ! -n <span class=s2>&quot;</span><span class=nv>$CD</span><span class=s2>&quot;</span> <span class=o>]</span><span class=p>;</span><span class=k>then</span>
+    <span class=nb>echo</span> <span class=s2>&quot;CD=</span><span class=nv>$CD</span><span class=s2> is NULL!Use </span><span class=nv>$PWD</span><span class=s2> for default.&quot;</span>
+    <span class=nv>CD</span><span class=o>=</span><span class=nv>$PWD</span>
+<span class=k>fi</span>
+
+<span class=nb>printf</span> <span class=s2>&quot; &#39;project=</span><span class=nv>$project</span><span class=s2>&#39;\n &#39;CD=</span><span class=nv>$CD</span><span class=s2>&#39;\n &#39;0=</span><span class=nv>$0</span><span class=s2>&#39;\n &#39;1=</span><span class=nv>$1</span><span class=s2>&#39;\n &#39;2=</span><span class=nv>$2</span><span class=s2>&#39;\n&quot;</span>
+
+<span class=nv>gitLocal</span><span class=o>=</span><span class=s2>&quot;</span><span class=nv>$CD</span><span class=s2>/</span><span class=nv>$project</span><span class=s2>&quot;</span>
+<span class=nv>gitRemote</span><span class=o>=</span><span class=s2>&quot;</span><span class=nv>$git_server</span><span class=s2>/</span><span class=nv>$git_user</span><span class=s2>/</span><span class=nv>$project</span><span class=s2>.git&quot;</span>
+
+<span class=nb>echo</span> <span class=s2>&quot;gitLocal=</span><span class=nv>$gitLocal</span><span class=s2>&quot;</span>
+<span class=nb>echo</span> <span class=s2>&quot;gitRemote=</span><span class=nv>$gitRemote</span><span class=s2>&quot;</span>
+
+<span class=k>if</span> <span class=o>[</span> -d <span class=s2>&quot;</span><span class=nv>$gitLocal</span><span class=s2>&quot;</span>  <span class=o>]</span><span class=p>;</span><span class=k>then</span>
+    <span class=nb>echo</span> <span class=s2>&quot;</span><span class=nv>$gitLocal</span><span class=s2> EXISTs！&quot;</span>
+    <span class=nb>cd</span> <span class=nv>$gitLocal</span>
+    <span class=k>if</span> <span class=o>[</span> ! -d <span class=s2>&quot;.git&quot;</span>  <span class=o>]</span><span class=p>;</span> <span class=k>then</span>
+        <span class=nb>echo</span> -e <span class=s2>&quot;</span><span class=nv>$gitLocal</span><span class=s2> does NOT contain &#39;.git&#39;!&quot;</span>
+        <span class=nb>echo</span> -e <span class=s2>&quot;Needing:\n  1.&#39;git init&#39; and\n  2.&#39;git remote add origin&#39;&quot;</span>
+        git init
+        git remote add origin <span class=nv>$gitRemote</span>
+        <span class=c1>#If there is any files,backup them or remove them.</span>
+        <span class=nv>p</span><span class=o>=</span><span class=sb>`</span>ls -a <span class=nv>$gitLocal</span><span class=sb>`</span>
+        <span class=k>if</span> <span class=o>[</span> <span class=si>${#</span><span class=nv>p</span><span class=si>}</span> -lt <span class=m>5</span> <span class=o>]</span><span class=p>;</span><span class=k>then</span>
+            <span class=nb>echo</span> -e <span class=s2>&quot;</span><span class=nv>$gitLocal</span><span class=s2> is an empity DIR!But NOT a NULL DIR,it contains:\n[</span><span class=nv>$p</span><span class=s2>]!&quot;</span>
+        <span class=k>else</span>
+            <span class=nb>echo</span> <span class=s2>&quot;You&#39;d better to &#39;mv ./* ../backup/&#39;,here just &#39;rm -rf ./*&#39;&quot;</span>
+            rm -rf ./*
+        <span class=k>fi</span>
+
+    <span class=k>fi</span>
+    <span class=nb>echo</span> <span class=s2>&quot;Optional &#39;git branch -l&#39;, to see the branch list.&quot;</span>
+    git branch -l
+    <span class=nb>echo</span> <span class=s2>&quot;&#39;git pull [master|dev|v0.1|v0.2|v1.0]...&#39; from </span><span class=nv>$gitRemote</span><span class=s2>.&quot;</span>
+    git pull origin master
+    <span class=c1># git pull --rebase</span>
+    <span class=nb>echo</span> -e <span class=s2>&quot;change </span><span class=nv>$gitLocal</span><span class=s2> own rights to &#39;www:www&#39;.&quot;</span>
+    <span class=c1># echo -e &quot;NOTICE: the &#39;git status&#39; will change to &#39;modified&#39; or &#39;delete&#39;!&quot;</span>
+    chown -R www:www <span class=nv>$gitLocal</span> &gt; /dev/null <span class=m>2</span>&gt;<span class=p>&amp;</span><span class=m>1</span>
+    <span class=nb>echo</span> <span class=s2>&quot;--------------------End--------------------&quot;</span>
+    <span class=nb>exit</span>
+<span class=k>else</span>
+    <span class=nb>echo</span> -e <span class=s2>&quot;</span><span class=nv>$gitLocal</span><span class=s2> does NOT EXIST!\n&#39;git clone </span><span class=nv>$gitRemote</span><span class=s2>&#39; directly!&quot;</span>
+    git clone <span class=nv>$gitRemote</span> <span class=nv>$gitLocal</span>
+    <span class=nb>echo</span> <span class=s2>&quot;--------------------End--------------------&quot;</span>
+    <span class=nb>exit</span>
+<span class=k>fi</span>
+</code></pre></div> <h2 id=3file-operation>3.File Operation<a class=headerlink href=#3file-operation title="Permanent link">&para;</a></h2> <p><strong>Check File/Directory Mode(s) [Situation/ is Empity?/ is NULL]</strong></p> <h3 id=31-iffortestarraycaseesacstring>3.1 if/for/test/array/case...esac/$#/string<a class=headerlink href=#31-iffortestarraycaseesacstring title="Permanent link">&para;</a></h3> <p><code class=codehilite><span class=err>~/mylf.sh</span></code> <div class=codehilite><pre><span></span><code><span class=ch>#!/bin/bash</span>
+
+<span class=c1># Generate test files</span>
+<span class=c1># for (( i=0;i&lt;5;i++ )); do touch tmp-$i.txt;done</span>
+<span class=c1># for (( i=0;i&lt;5;i++ )); do touch tmp-$i.txt; echo &#39;test&#39;-$i &gt;&gt; tmp-$i.txt;done</span>
+
+<span class=nb>echo</span> <span class=s2>&quot;Number of params=</span><span class=nv>$#</span><span class=s2>&quot;</span>
+<span class=nb>echo</span> -e <span class=s2>&quot;Run file=</span><span class=nv>$0</span><span class=s2>\nParam=</span><span class=nv>$1</span><span class=s2>&quot;</span>
+
+<span class=k>if</span> <span class=o>[</span> <span class=m>1</span> -gt <span class=nv>$#</span> <span class=o>]</span><span class=p>;</span><span class=k>then</span>
+    <span class=nb>echo</span> <span class=s2>&quot;No param input!Only need one!&quot;</span>
+    <span class=nb>exit</span>
+<span class=k>fi</span>
+
+<span class=k>if</span> <span class=o>[</span> <span class=m>1</span> -lt <span class=nv>$#</span> <span class=o>]</span><span class=p>;</span><span class=k>then</span>
+    <span class=nb>echo</span> <span class=s1>&#39;Too many params!Only need one!&#39;</span>
+    <span class=nb>exit</span>
+<span class=k>fi</span>
+
+<span class=nv>fm</span><span class=o>=(</span> <span class=s1>&#39;-e&#39;</span> <span class=s1>&#39;-b&#39;</span> <span class=s1>&#39;-c&#39;</span> <span class=s1>&#39;-d&#39;</span> <span class=s1>&#39;-f&#39;</span> <span class=s1>&#39;-g&#39;</span> <span class=s1>&#39;-k&#39;</span> <span class=s1>&#39;-p&#39;</span> <span class=s1>&#39;-u&#39;</span> <span class=s1>&#39;-r&#39;</span> <span class=s1>&#39;-w&#39;</span> <span class=s1>&#39;-x&#39;</span> <span class=s1>&#39;-s&#39;</span> <span class=s1>&#39;-S&#39;</span> <span class=s1>&#39;-L&#39;</span><span class=o>)</span>
+<span class=c1># echo ${fm[1]}</span>
+<span class=c1># echo ${fm}</span>
+<span class=c1># echo ${fm[*]}</span>
+<span class=c1># echo ${#fm[@]}</span>
+
+<span class=nv>count</span><span class=o>=</span><span class=m>0</span>
+<span class=nv>ml</span><span class=o>=</span><span class=s2>&quot;&quot;</span>
+<span class=k>for</span> m in <span class=si>${</span><span class=nv>fm</span><span class=p>[*]</span><span class=si>}</span>
+<span class=k>do</span>
+    <span class=k>if</span> <span class=o>[</span> ! -e <span class=nv>$1</span> <span class=o>]</span><span class=p>;</span><span class=k>then</span>
+        <span class=nb>echo</span> <span class=s2>&quot;</span><span class=nv>$1</span><span class=s2> does NOT exist.&quot;</span>
+        <span class=nb>exit</span>
+    <span class=k>fi</span>
+    <span class=k>if</span> <span class=o>[</span> <span class=nv>$m</span> <span class=nv>$1</span> <span class=o>]</span><span class=p>;</span><span class=k>then</span>
+        <span class=nv>count</span><span class=o>=</span><span class=sb>`</span>expr <span class=nv>$count</span> + <span class=m>1</span><span class=sb>`</span>
+        <span class=nv>ml</span><span class=o>=</span><span class=s2>&quot;</span><span class=nv>$ml</span><span class=s2>&quot;</span><span class=s1>&#39; &#39;</span><span class=s2>&quot;</span><span class=nv>$m</span><span class=s2>&quot;</span>
+        <span class=c1># echo &quot;$1 has $m mode!&quot;</span>
+    <span class=k>fi</span>
+<span class=k>done</span>
+
+<span class=nb>echo</span> -e <span class=s2>&quot;ml=</span><span class=nv>$ml</span><span class=s2>\ncount=</span><span class=nv>$count</span><span class=s2>&quot;</span>
+
+<span class=k>if</span> <span class=o>[[</span> <span class=si>${#</span><span class=nv>ml</span><span class=si>}</span> -lt <span class=m>1</span> <span class=o>||</span> <span class=nv>$count</span> -eq <span class=m>0</span> <span class=o>]]</span><span class=p>;</span> <span class=k>then</span>
+    <span class=nb>echo</span> <span class=s2>&quot;</span><span class=nv>$1</span><span class=s2> has spacial mode.&quot;</span>
+    <span class=nb>exit</span>
+<span class=k>fi</span>
+
+<span class=k>for</span> m in <span class=si>${</span><span class=nv>ml</span><span class=p>[*]</span><span class=si>}</span>
+<span class=k>do</span>
+    <span class=k>case</span> <span class=nv>$m</span> in
+        <span class=s1>&#39;-e&#39;</span><span class=o>)</span> <span class=nb>echo</span> <span class=s2>&quot;-e : </span><span class=nv>$1</span><span class=s2> exists.&quot;</span>
+            <span class=c1># continue</span>
+            <span class=p>;;</span>
+        <span class=s1>&#39;-d&#39;</span><span class=o>)</span> <span class=nb>echo</span> <span class=s2>&quot;-d : </span><span class=nv>$1</span><span class=s2> is DIR.&quot;</span>
+            <span class=nv>p</span><span class=o>=</span><span class=sb>`</span>ls -a <span class=nv>$1</span><span class=sb>`</span>
+            <span class=k>if</span> <span class=o>[</span> <span class=si>${#</span><span class=nv>p</span><span class=si>}</span> -lt <span class=m>5</span> <span class=o>]</span><span class=p>;</span><span class=k>then</span>
+                <span class=nb>echo</span> -e <span class=s2>&quot;</span><span class=nv>$1</span><span class=s2> is an empity DIR!But NOT a NULL DIR,it contains:\n[</span><span class=nv>$p</span><span class=s2>]!&quot;</span>
+            <span class=k>else</span>
+                <span class=c1># ls -a $1</span>
+                <span class=c1># echo $p</span>
+                <span class=k>continue</span>
+            <span class=k>fi</span>
+            <span class=p>;;</span>
+        <span class=s1>&#39;-f&#39;</span><span class=o>)</span> <span class=nb>echo</span> <span class=s2>&quot;-f : </span><span class=nv>$1</span><span class=s2> is common file Nither DIR nor DEVICE.&quot;</span>
+            <span class=nv>p</span><span class=o>=</span><span class=sb>`</span>cat <span class=nv>$1</span><span class=sb>`</span>
+            <span class=k>if</span> <span class=o>[</span> <span class=si>${#</span><span class=nv>p</span><span class=si>}</span> -eq <span class=m>0</span> <span class=o>]</span><span class=p>;</span><span class=k>then</span>
+                <span class=nb>echo</span> <span class=s2>&quot;</span><span class=nv>$1</span><span class=s2> is NULL common file.&quot;</span>
+            <span class=k>fi</span>
+            <span class=c1># cat $1</span>
+            <span class=p>;;</span>
+        <span class=s1>&#39;-s&#39;</span><span class=o>)</span> <span class=nb>echo</span> <span class=s2>&quot;-s : </span><span class=nv>$1</span><span class=s2> NOT NULL.&quot;</span>
+            <span class=c1># cat $1</span>
+            <span class=p>;;</span>
+        <span class=s1>&#39;-x&#39;</span><span class=o>)</span> <span class=nb>echo</span> <span class=s2>&quot;-x : </span><span class=nv>$1</span><span class=s2> is an EXEC RUN file.&quot;</span>
+            <span class=p>;;</span>
+        <span class=s1>&#39;-r&#39;</span><span class=o>)</span> <span class=nb>echo</span> <span class=s2>&quot;-r : </span><span class=nv>$1</span><span class=s2> is Readable.&quot;</span>
+            <span class=p>;;</span>
+        <span class=s1>&#39;-w&#39;</span><span class=o>)</span> <span class=nb>echo</span> <span class=s2>&quot;-w : </span><span class=nv>$1</span><span class=s2> is Writeable.&quot;</span>
+            <span class=p>;;</span>
+        <span class=s1>&#39;-b&#39;</span><span class=p>|</span><span class=s1>&#39;-c&#39;</span><span class=p>|</span><span class=s1>&#39;-g&#39;</span><span class=p>|</span><span class=s1>&#39;-k&#39;</span><span class=p>|</span><span class=s1>&#39;-p&#39;</span><span class=p>|</span><span class=s1>&#39;u&#39;</span><span class=o>)</span> <span class=nb>echo</span> <span class=s2>&quot;&#39;-b&#39;|&#39;-c&#39;|&#39;-g&#39;|&#39;-k&#39;|&#39;-p&#39;|&#39;u&#39; : </span><span class=nv>$1</span><span class=s2> is something else,such as BLOCKSET, CHARSET, SGID, Sticky Bit, Panel, SUID.&quot;</span>
+            <span class=p>;;</span>
+        <span class=s1>&#39;-S&#39;</span><span class=o>)</span> <span class=nb>echo</span> <span class=s2>&quot;-S : </span><span class=nv>$1</span><span class=s2> is a Socket.&quot;</span>
+            <span class=p>;;</span>
+        <span class=s1>&#39;-L&#39;</span><span class=o>)</span> <span class=nb>echo</span> <span class=s2>&quot;-L : </span><span class=nv>$1</span><span class=s2> is a Symbol Link.&quot;</span>
+            <span class=p>;;</span>
+        *<span class=o>)</span> <span class=nb>echo</span> <span class=s2>&quot;</span><span class=nv>$1</span><span class=s2> does NOT exist, or is something unknown.&quot;</span>
+            <span class=nb>break</span>
+            <span class=p>;;</span>
+    <span class=k>esac</span>
+<span class=k>done</span>
+</code></pre></div></p> <h3 id=32-if-gt-e>3.2 if/$#/-gt/-e.../||<a class=headerlink href=#32-if-gt-e title="Permanent link">&para;</a></h3> <p><code class=codehilite><span class=err>~/test-file.sh</span></code> <div class=codehilite><pre><span></span><code><span class=ch>#!/bin/bash</span>
+
+
+<span class=c1># for (( i=0;i&lt;5;i++ )); do touch tmp-$i.txt;done</span>
+<span class=c1># for (( i=0;i&lt;5;i++ )); do touch tmp-$i.txt; echo &#39;test&#39;-$i &gt;&gt; tmp-$i.txt;done</span>
+
+<span class=nb>echo</span> <span class=s2>&quot;</span><span class=nv>$#</span><span class=s2>&quot;</span>
+<span class=nb>echo</span> -e <span class=s2>&quot;</span><span class=nv>$0</span><span class=s2> \n </span><span class=nv>$1</span><span class=s2> \n </span><span class=nv>$2</span><span class=s2>&quot;</span>
+
+<span class=k>if</span> <span class=o>[</span> <span class=m>1</span> -gt <span class=nv>$#</span> <span class=o>]</span><span class=p>;</span><span class=k>then</span>
+    <span class=nb>echo</span> <span class=s2>&quot;No param input!Only need one!&quot;</span>
+    <span class=nb>exit</span>
+
+<span class=k>fi</span>
+
+<span class=k>if</span> <span class=o>[</span> <span class=m>1</span> -lt <span class=nv>$#</span> <span class=o>]</span><span class=p>;</span><span class=k>then</span>
+    <span class=nb>echo</span> <span class=s1>&#39;Too many params!Only need one!&#39;</span>
+    <span class=nb>exit</span>
+<span class=k>fi</span>
+
+<span class=k>if</span> <span class=o>[</span> -e <span class=nv>$1</span> <span class=o>]</span><span class=p>;</span><span class=k>then</span>
+    <span class=nb>echo</span> <span class=nv>$1</span><span class=s1>&#39; exists!&#39;</span>
+<span class=k>else</span>
+    <span class=nb>echo</span> <span class=nv>$1</span><span class=s1>&#39; NOT exists!&#39;</span>
+    <span class=nb>exit</span>
+<span class=k>fi</span>
+
+<span class=k>if</span> <span class=o>[</span> -d <span class=nv>$1</span> <span class=o>]</span><span class=p>;</span><span class=k>then</span>
+    <span class=nb>echo</span> <span class=nv>$1</span><span class=s1>&#39; is DIR.&#39;</span>
+    <span class=nv>p</span><span class=o>=</span><span class=sb>`</span>ls -a <span class=nv>$1</span><span class=sb>`</span>
+    <span class=k>if</span> <span class=o>[</span> <span class=si>${#</span><span class=nv>p</span><span class=si>}</span> -lt <span class=m>5</span> <span class=o>]</span><span class=p>;</span><span class=k>then</span>
+        <span class=nb>echo</span> <span class=nv>$1</span><span class=s1>&#39; is NULL DIR!&#39;</span>
+    <span class=k>else</span>
+        ls -a <span class=nv>$1</span>
+    <span class=k>fi</span>
+    <span class=nb>exit</span>
+<span class=k>else</span>
+    <span class=nb>echo</span> <span class=nv>$1</span><span class=s1>&#39; is NOT DIR.&#39;</span>
+<span class=k>fi</span>
+
+<span class=k>if</span> <span class=o>[</span> -f <span class=nv>$1</span> <span class=o>]</span><span class=p>;</span><span class=k>then</span>
+    <span class=nb>echo</span> <span class=nv>$1</span><span class=s1>&#39; is common file Nither DIR nor device.&#39;</span>
+    <span class=k>if</span> <span class=o>[</span> -s <span class=nv>$1</span> <span class=o>]</span><span class=p>;</span><span class=k>then</span>
+        <span class=nb>echo</span> <span class=nv>$1</span><span class=s1>&#39; NOT NULL.&#39;</span>
+        <span class=k>if</span> <span class=o>[</span> -x <span class=nv>$1</span> <span class=o>]</span><span class=p>;</span><span class=k>then</span>
+            <span class=nb>echo</span> <span class=nv>$1</span><span class=s1>&#39; is RUN file.&#39;</span>
+            <span class=nb>exit</span>
+        <span class=k>else</span>
+            cat <span class=nv>$1</span>
+            <span class=nb>exit</span>
+        <span class=k>fi</span>
+    <span class=k>else</span>
+        <span class=nb>echo</span> <span class=nv>$1</span><span class=s1>&#39; is NULL file.&#39;</span>
+        <span class=nb>exit</span>
+    <span class=k>fi</span>
+<span class=k>else</span>
+    <span class=k>if</span> <span class=o>[[</span> -b <span class=nv>$1</span> <span class=o>||</span> -c <span class=nv>$1</span> <span class=o>||</span> -g <span class=nv>$1</span> <span class=o>||</span> -k <span class=nv>$1</span> <span class=o>||</span> -p <span class=nv>$1</span> <span class=o>||</span> -u <span class=nv>$1</span> <span class=o>]]</span><span class=p>;</span><span class=k>then</span>
+        <span class=nb>echo</span> <span class=nv>$1</span><span class=s1>&#39; is something else.&#39;</span>
+        <span class=nb>exit</span>
+    <span class=k>fi</span>
+    <span class=nb>echo</span> <span class=nv>$1</span><span class=s1>&#39; is something unknown.&#39;</span>
+    <span class=nb>exit</span>
+<span class=k>fi</span>
+</code></pre></div></p> <h2 id=4scp>4.scp<a class=headerlink href=#4scp title="Permanent link">&para;</a></h2> <div class=codehilite><pre><span></span><code><span class=n>sshpass</span> <span class=o>-</span><span class=n>p</span> <span class=s>&quot;dick@206530&quot;</span> <span class=n>scp</span> <span class=o>-</span><span class=n>r</span> <span class=p>.</span><span class=n>vim</span> <span class=n>root</span><span class=mf>@121.43.154.253</span><span class=o>:/</span><span class=n>root</span>
+<span class=n>scp</span> <span class=n>root</span><span class=mf>@106.13.213.177</span><span class=o>:/</span><span class=n>www</span><span class=o>/</span><span class=n>wwwroot</span><span class=o>/</span><span class=n>ftp</span><span class=o>/</span><span class=n>tmp_aria2</span><span class=o>/</span><span class=n>StormOnline</span><span class=o>-</span><span class=n>master</span><span class=p>.</span><span class=n>zip</span> <span class=p>.</span>
+<span class=cp># cd /mnt/d/backups/linux/zt-aliyun</span>
+<span class=cp># sshpass -p “password” rsync -avz --delete root@121.43.154.253:/ .</span>
+</code></pre></div> <h2 id=5rsync>5.rsync<a class=headerlink href=#5rsync title="Permanent link">&para;</a></h2> <div class=codehilite><pre><span></span><code><span class=n>echo</span> <span class=err>&#39;#</span> <span class=mf>1.</span><span class=err>备份</span><span class=o>:</span><span class=n>zt</span><span class=o>-</span><span class=n>bd</span><span class=o>-</span><span class=n>yun</span><span class=err>&#39;</span>
+<span class=n>cd</span> <span class=o>/</span><span class=n>mnt</span><span class=o>/</span><span class=n>d</span><span class=o>/</span><span class=n>backups</span><span class=o>/</span><span class=n>linux</span><span class=o>/</span><span class=n>zt</span><span class=o>-</span><span class=n>bd</span><span class=o>-</span><span class=n>yun</span>
+<span class=cp># sshpass -p “password” rsync -avz --delete root@106.13.213.177:/www/wwwroot/ftp .</span>
+<span class=n>nohup</span> <span class=n>sshpass</span> <span class=o>-</span><span class=n>p</span> <span class=err>“</span><span class=n>dick</span><span class=mi>@206530</span><span class=err>”</span> <span class=n>rsync</span> <span class=o>-</span><span class=n>avz</span> <span class=n>root</span><span class=mf>@106.13.213.177</span><span class=o>:/</span><span class=n>www</span> <span class=p>.</span> <span class=o>&amp;</span>
+
+<span class=n>echo</span> <span class=err>&#39;#</span> <span class=mf>2.</span><span class=err>备份</span><span class=o>:</span><span class=n>zt</span><span class=o>-</span><span class=n>aliyun</span><span class=err>&#39;</span>
+<span class=n>cd</span> <span class=o>/</span><span class=n>mnt</span><span class=o>/</span><span class=n>d</span><span class=o>/</span><span class=n>backups</span><span class=o>/</span><span class=n>linux</span><span class=o>/</span><span class=n>zt</span><span class=o>-</span><span class=n>aliyun</span>
+<span class=n>nohup</span> <span class=n>sshpass</span> <span class=o>-</span><span class=n>p</span> <span class=err>“</span><span class=n>dick</span><span class=mi>@206530</span><span class=err>”</span> <span class=n>rsync</span> <span class=o>-</span><span class=n>avz</span> <span class=n>root</span><span class=mf>@121.43.154.253</span><span class=o>:/</span><span class=n>www</span> <span class=p>.</span> <span class=o>&amp;</span>
+<span class=cp>#!/bin/bash</span>
+</code></pre></div> <h2 id=6connect-mysql>6.connect mysql<a class=headerlink href=#6connect-mysql title="Permanent link">&para;</a></h2> <div class=codehilite><pre><span></span><code><span class=n>sudo</span> <span class=n>sshpass</span> <span class=o>-</span><span class=n>p</span> <span class=mi>123</span> <span class=o>/</span><span class=n>etc</span><span class=o>/</span><span class=n>init</span><span class=p>.</span><span class=n>d</span><span class=o>/</span><span class=n>mysql</span> <span class=k>restart</span>
+
+<span class=o>#</span> <span class=n>sudo</span> <span class=n>sshpass</span> <span class=o>-</span><span class=n>p</span> <span class=mi>123</span> <span class=n>mysql</span> <span class=o>-</span><span class=n>u</span> <span class=n>root</span> <span class=o>-</span><span class=n>p</span> <span class=n>dbname</span> <span class=o>&lt;</span> <span class=o>*</span><span class=p>.</span><span class=k>sql</span>
+<span class=n>sudo</span> <span class=n>sshpass</span> <span class=o>-</span><span class=n>p</span> <span class=mi>123</span> <span class=n>mysql</span> <span class=o>-</span><span class=n>u</span> <span class=n>root</span> <span class=o>-</span><span class=n>p</span>
+</code></pre></div> <h2 id=7kill-ps>7.kill ps<a class=headerlink href=#7kill-ps title="Permanent link">&para;</a></h2> <div class=codehilite><pre><span></span><code><span class=err>ps -ef|grep flask|awk {print }|xargs kill -9</span>
+</code></pre></div> <h2 id=8pause>8.pause<a class=headerlink href=#8pause title="Permanent link">&para;</a></h2> <div class=codehilite><pre><span></span><code><span class=ch>#!/bin/bash</span>
+
+<span class=nb>read</span> -p <span class=s1>&#39;Input pause time:&#39;</span> ipt
+
+<span class=nv>ti1</span><span class=o>=</span><span class=sb>`</span>date +%s<span class=sb>`</span>    <span class=c1>#获取时间戳</span>
+<span class=nv>ti2</span><span class=o>=</span><span class=sb>`</span>date +%s<span class=sb>`</span>
+<span class=nv>i</span><span class=o>=</span><span class=k>$((</span><span class=nv>$ti2</span> <span class=o>-</span> <span class=nv>$ti1</span> <span class=k>))</span>
+
+<span class=k>while</span> <span class=o>[[</span> <span class=s2>&quot;</span><span class=nv>$i</span><span class=s2>&quot;</span> -ne <span class=s2>&quot;</span><span class=nv>$ipt</span><span class=s2>&quot;</span>  <span class=o>]]</span>
+<span class=k>do</span>
+        <span class=nv>ti2</span><span class=o>=</span><span class=sb>`</span>date +%s<span class=sb>`</span>
+        <span class=nv>i</span><span class=o>=</span><span class=k>$((</span><span class=nv>$ti2</span> <span class=o>-</span> <span class=nv>$ti1</span> <span class=k>))</span>
+<span class=k>done</span>
+
+<span class=nb>echo</span> <span class=s2>&quot;Pause </span><span class=nv>$ipt</span><span class=s2>(s), over,then start!&quot;</span>
+</code></pre></div> <hr> <div class=md-source-date> <small> Last update: 2020-03-12 14:42:51 </small> </div> </article> </div> </div> </main> <footer class=md-footer> <div class=md-footer-nav> <nav class="md-footer-nav__inner md-grid"> <a href=../linux-cmds/ title="Linux commands" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel=prev> <div class="md-flex__cell md-flex__cell--shrink"> <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i> </div> <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"> <span class=md-flex__ellipsis> <span class=md-footer-nav__direction> Previous </span> Linux commands </span> </div> </a> <a href=../bt/ title=DevOps class="md-flex md-footer-nav__link md-footer-nav__link--next" rel=next> <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"> <span class=md-flex__ellipsis> <span class=md-footer-nav__direction> Next </span> DevOps </span> </div> <div class="md-flex__cell md-flex__cell--shrink"> <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i> </div> </a> </nav> </div> <div class="md-footer-meta md-typeset"> <div class="md-footer-meta__inner md-grid"> <div class=md-footer-copyright> <div class=md-footer-copyright__highlight> Copyright &copy; 2020 - 2021 Dick Sven </div> powered by <a href=https://www.mkdocs.org target=_blank rel=noopener>MkDocs</a> and <a href=https://squidfunk.github.io/mkdocs-material/ target=_blank rel=noopener> Material for MkDocs</a> </div> <div class=md-footer-social> <link rel=stylesheet href=../../assets/fonts/font-awesome.css> <a href=https://github.com/dick7 target=_blank rel=noopener title=github class="md-footer-social__link fa fa-github"></a> <a href=https://gitee.com/dick7_love target=_blank rel=noopener title=gitee class="md-footer-social__link fa fa-gitee"></a> <a href=https://www.linkedin.com/in/dick7_love target=_blank rel=noopener title=linkedin class="md-footer-social__link fa fa-linkedin"></a> <a href=https://juejin.im/user/5e5e5768e51d4526d43f3ac6 target=_blank rel=noopener title=juejin class="md-footer-social__link fa fa-juejin"></a> <a href=https://live.kuaishou.com/profile/3xn5rycf9cpr9s4 target=_blank rel=noopener title=kuaishou class="md-footer-social__link fa fa-kuaishou"></a> <a href=https://wx.qq.com/dick7_love target=_blank rel=noopener title=wechat class="md-footer-social__link fa fa-wechat"></a> <a href=https://www.zhihu.com/people/dick7 target=_blank rel=noopener title class="md-footer-social__link fa fa-"></a> <a href=https://www.douban.com/people/168395085/ target=_blank rel=noopener title=douban class="md-footer-social__link fa fa-douban"></a> <a href=https://www.jianshu.com/u/cfae97b3b879 target=_blank rel=noopener title=jianshu class="md-footer-social__link fa fa-jianshu"></a> <a href=https://my.alipay.com/portal/i.htm target=_blank rel=noopener title=alipay class="md-footer-social__link fa fa-alipay"></a> <a href=https://i.taobao.com/ target=_blank rel=noopener title=taobao class="md-footer-social__link fa fa-taobao"></a> <a href=https://im.qq.com/549119612 target=_blank rel=noopener title=qq class="md-footer-social__link fa fa-qq"></a> <a href=http://i.baidu.com/ target=_blank rel=noopener title=baidu class="md-footer-social__link fa fa-baidu"></a> <a href=https://qichangyu123456789.lofter.com/ target=_blank rel=noopener title=lofter class="md-footer-social__link fa fa-lofter"></a> <a href="https://weibo.com/u/6054906548/home?wvr=5" target=_blank rel=noopener title=sina class="md-footer-social__link fa fa-sina"></a> <a href=http://blog.new-realm.cn/ target=_blank rel=noopener title=new-realm class="md-footer-social__link fa fa-new-realm"></a> <a href=http://dev.ztloadfield.com/ target=_blank rel=noopener title=ztloadfield class="md-footer-social__link fa fa-ztloadfield"></a> </div> </div> </div> </footer> </div> <script src=../../assets/javascripts/application.c33a9706.js></script> <script>app.initialize({version:"1.1",url:{base:"../.."}})</script> </body> </html>
