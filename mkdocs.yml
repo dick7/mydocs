@@ -5,6 +5,7 @@ nav:
     - MkDocs: 
       - mkdocs/mkdocs.md
       - mkdocs/markdown.md
+      - mkdocs/jupyter-book.md
     - Imgs: imgs.md
     - Links: links.md
     - Fields:  
@@ -36,6 +37,7 @@ nav:
     - Linux Shell: 
       - Apt-pip-yum: server/apt.md
       - Linux commands: server/linux-cmds.md
+      - Examples: server/examples.md
       - Linux shell: server/linux-shell.md
       - DevOps: server/bt.md
       - KVM: server/kvm.md
