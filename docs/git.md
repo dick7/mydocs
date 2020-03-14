@@ -42,9 +42,7 @@ build/
 ```
 ## 3.webhook on [github](https://github.com/dick7/mydocs)
 
-> [***`mywebhook.sh`***](mydocs/server/linux-shell/#2git-webhook)
-
-- ~~[***`mywebhook.sh`***](/server/linux-shell/#2git-webhook)~~
+> [***`mywebhook.sh`***](/server/linux-shell/#2git-webhook)
 
 ### 3.1 github webhook config and test
 

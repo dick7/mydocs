@@ -1,9 +1,9 @@
 # Welcome to mydocs
 
-> mydocs made by python [MkDocs](http://doc.ztloadfield.com:8500/mkdocs/)
+> mydocs made by python [MkDocs](http://doc.ztloadfield.com/mkdocs/)
 
 - Source: *[mydocs](https://github.com/dick7/mydocs)*
-- Site: [http://doc.ztloadfield.com/](http://doc.ztloadfield.com:8500)
+- Site: [http://doc.ztloadfield.com/](http://doc.ztloadfield.com/)
 
 
 ## Commands
@@ -23,14 +23,13 @@
 
 ## Now layout Tree
 
-[***`cat mkdocs.yml >> docs/mydocs-yaml.md`***](/mydocs-yaml/#mydocs-yaml)
-
+[***`cat mkdocs.yml >> docs/yaml-travis/mydocs-yaml.md`***](/yaml-travis/mydocs-yaml/#mydocs-yaml)
 
 ## README
 
 ***`README.md`***
 
-> mydocs made by python [MkDocs](http://doc.ztloadfield.com:8500/)
+> mydocs made by python [MkDocs](http://doc.ztloadfield.com/)
 
 > Themed by [mkdocs-material](https://github.com/squidfunk/mkdocs-material)
 
@@ -39,7 +38,7 @@
 
     [**github**](https://dick7.github.io/mydocs/)
     
-    [**aliyun**](http://doc.ztloadfield.com:8500)
+    [**aliyun**](http://doc.ztloadfield.com/)
 
 
 

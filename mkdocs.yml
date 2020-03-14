@@ -73,6 +73,8 @@ nav:
       - nat/frp.md
       - nat/openwrt.md
       - nat/zerotieone.md
+    - DNS: dns.md
+    - Mail: mail.md
     - Cheat-Sheets: cheat-sheets.md
     - Diary-2020-3: 
         - Test: diaries/0.md

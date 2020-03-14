@@ -1,6 +1,6 @@
 # mydocs
 
-> mydocs made by python [MkDocs](http://doc.ztloadfield.com:8500/)
+> mydocs made by python [MkDocs](http://doc.ztloadfield.com/)
 
 > Themed by [mkdocs-material](https://github.com/squidfunk/mkdocs-material)
 
@@ -9,4 +9,4 @@
 
     [**github**](https://dick7.github.io/mydocs/)
     
-    [**aliyun**](http://doc.ztloadfield.com:8500)
+    [**aliyun**](http://doc.ztloadfield.com)
