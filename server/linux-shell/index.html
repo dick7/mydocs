@@ -49,31 +49,53 @@ date --date<span class=o>=</span><span class=s1>&#39;0 days ago&#39;</span> <spa
 <span class=nb>echo</span> <span class=s2>&quot;gitLocal=</span><span class=nv>$gitLocal</span><span class=s2>&quot;</span>
 <span class=nb>echo</span> <span class=s2>&quot;gitRemote=</span><span class=nv>$gitRemote</span><span class=s2>&quot;</span>
 
+git_init_pull<span class=o>(){</span>
+    <span class=nb>echo</span> <span class=s2>&quot;Do NOT maintain GIT state!&quot;</span>
+    <span class=nb>echo</span> -e <span class=s2>&quot;Starting &#39;git_init_pull()&#39;!\nNeeding:\n  1.&#39;git init&#39; and\n  2.&#39;git remote add origin&#39;&quot;</span>
+    git init
+    git remote add origin <span class=nv>$gitRemote</span>
+    <span class=nb>echo</span> <span class=s2>&quot;&#39;git pull [master|dev|v0.1|v0.2|v1.0]...&#39; from </span><span class=nv>$gitRemote</span><span class=s2>.&quot;</span>
+    <span class=c1># git reset --hard origin/master</span>
+    <span class=c1># git pull origin master</span>
+    git pull
+    <span class=c1># git pull --rebase</span>
+<span class=o>}</span>
+
+backup<span class=o>(){</span>
+    <span class=nb>echo</span> <span class=s2>&quot;Starting &#39;backup()&#39;!&quot;</span>
+    <span class=k>if</span> <span class=o>[</span> ! -d ../backup <span class=o>]</span><span class=p>;</span><span class=k>then</span>
+        mkdir ../backup
+        mv ./* ../backup
+        mv ./.* ../backup
+    <span class=k>else</span>
+        mv ./* ../backup
+        mv ./.* ../backup
+    <span class=k>fi</span>
+    <span class=nb>echo</span> <span class=s2>&quot;Already backup to </span><span class=nv>$CD</span><span class=s2>/backup&quot;</span>
+    <span class=c1>#rm -rf ./*</span>
+    <span class=c1>#rm -rf ./.*</span>
+
+<span class=o>}</span>
+
 <span class=k>if</span> <span class=o>[</span> -d <span class=s2>&quot;</span><span class=nv>$gitLocal</span><span class=s2>&quot;</span>  <span class=o>]</span><span class=p>;</span><span class=k>then</span>
     <span class=nb>echo</span> <span class=s2>&quot;</span><span class=nv>$gitLocal</span><span class=s2> EXISTs！&quot;</span>
     <span class=nb>cd</span> <span class=nv>$gitLocal</span>
-    <span class=k>if</span> <span class=o>[</span> ! -d <span class=s2>&quot;.git&quot;</span>  <span class=o>]</span><span class=p>;</span> <span class=k>then</span>
-        <span class=nb>echo</span> -e <span class=s2>&quot;</span><span class=nv>$gitLocal</span><span class=s2> does NOT contain &#39;.git&#39;!&quot;</span>
-        <span class=nb>echo</span> -e <span class=s2>&quot;Needing:\n  1.&#39;git init&#39; and\n  2.&#39;git remote add origin&#39;&quot;</span>
-        git init
-        git remote add origin <span class=nv>$gitRemote</span>
-        <span class=c1>#If there is any files,backup them or remove them.</span>
-        <span class=nv>p</span><span class=o>=</span><span class=sb>`</span>ls -a <span class=nv>$gitLocal</span><span class=sb>`</span>
-        <span class=k>if</span> <span class=o>[</span> <span class=si>${#</span><span class=nv>p</span><span class=si>}</span> -lt <span class=m>5</span> <span class=o>]</span><span class=p>;</span><span class=k>then</span>
-            <span class=nb>echo</span> -e <span class=s2>&quot;</span><span class=nv>$gitLocal</span><span class=s2> is an empity DIR!But NOT a NULL DIR,it contains:\n[</span><span class=nv>$p</span><span class=s2>]!&quot;</span>
-        <span class=k>else</span>
-            <span class=nb>echo</span> <span class=s2>&quot;You&#39;d better to &#39;mv ./* ../backup/&#39;,here just &#39;rm -rf ./*&#39;&quot;</span>
-            rm -rf ./*
-        <span class=k>fi</span>
-
+    <span class=nv>p</span><span class=o>=</span><span class=sb>`</span>ls -a<span class=sb>`</span>
+    <span class=nb>echo</span> -e <span class=s2>&quot;[</span><span class=nv>$p</span><span class=s2>]\n</span><span class=si>${#</span><span class=nv>p</span><span class=si>}</span><span class=s2>&quot;</span>
+    <span class=k>if</span> <span class=nb>test</span> -d .git <span class=p>;</span><span class=k>then</span>
+        <span class=nb>echo</span> <span class=s2>&quot;Optional &#39;git branch -l&#39;, to see the branch list.&quot;</span>
+        git branch -l
+        <span class=c1>#git pull origin master</span>
+        git pull
+    <span class=k>elif</span> <span class=o>[</span> <span class=si>${#</span><span class=nv>p</span><span class=si>}</span> -lt <span class=m>5</span> <span class=o>]</span><span class=p>;</span><span class=k>then</span>
+        git_init_pull
+    <span class=k>else</span>
+        <span class=nb>echo</span> <span class=s2>&quot;There is other file(s),backup or remove.&quot;</span>
+        backup
+        git_init_pull
     <span class=k>fi</span>
-    <span class=nb>echo</span> <span class=s2>&quot;Optional &#39;git branch -l&#39;, to see the branch list.&quot;</span>
-    git branch -l
-    <span class=nb>echo</span> <span class=s2>&quot;&#39;git pull [master|dev|v0.1|v0.2|v1.0]...&#39; from </span><span class=nv>$gitRemote</span><span class=s2>.&quot;</span>
-    git pull origin master
-    <span class=c1># git pull --rebase</span>
-    <span class=nb>echo</span> -e <span class=s2>&quot;change </span><span class=nv>$gitLocal</span><span class=s2> own rights to &#39;www:www&#39;.&quot;</span>
-    <span class=c1># echo -e &quot;NOTICE: the &#39;git status&#39; will change to &#39;modified&#39; or &#39;delete&#39;!&quot;</span>
+    <span class=nb>echo</span> -e <span class=s2>&quot;Change </span><span class=nv>$gitLocal</span><span class=s2> own rights to &#39;www:www&#39;.&quot;</span>
+    <span class=nb>echo</span> -e <span class=s2>&quot;NOTICE: the &#39;git status&#39; will change to &#39;modified&#39; or &#39;deleted&#39;!&quot;</span>
     chown -R www:www <span class=nv>$gitLocal</span> &gt; /dev/null <span class=m>2</span>&gt;<span class=p>&amp;</span><span class=m>1</span>
     <span class=nb>echo</span> <span class=s2>&quot;--------------------End--------------------&quot;</span>
     <span class=nb>exit</span>
