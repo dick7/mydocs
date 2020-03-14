@@ -42,7 +42,7 @@ build/
 ```
 ## 3.webhook on [github](https://github.com/dick7/mydocs)
 
-> [***`mywebhook.sh`***](/linux-shell/#2git-webhook)
+> [***`mywebhook.sh`***](/server/linux-shell/#2git-webhook)
 
 ~~[***`mywebhook.sh`***](https://dick7.github.io/mydocs/linux-shell/#2git-webhook)~~
 
