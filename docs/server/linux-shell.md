@@ -79,31 +79,53 @@ gitRemote="$git_server/$git_user/$project.git"
 echo "gitLocal=$gitLocal"
 echo "gitRemote=$gitRemote"
 
+git_init_pull(){
+    echo "Do NOT maintain GIT state!"
+    echo -e "Starting 'git_init_pull()'!\nNeeding:\n  1.'git init' and\n  2.'git remote add origin'"
+    git init
+    git remote add origin $gitRemote
+    echo "'git pull [master|dev|v0.1|v0.2|v1.0]...' from $gitRemote."
+    # git reset --hard origin/master
+    # git pull origin master
+    git pull
+    # git pull --rebase
+}
+
+backup(){
+    echo "Starting 'backup()'!"
+    if [ ! -d ../backup ];then
+        mkdir ../backup
+        mv ./* ../backup
+        mv ./.* ../backup
+    else
+        mv ./* ../backup
+        mv ./.* ../backup
+    fi
+    echo "Already backup to $CD/backup"
+    #rm -rf ./*
+    #rm -rf ./.*
+
+}
+
 if [ -d "$gitLocal"  ];then
     echo "$gitLocal EXISTs！"
     cd $gitLocal
-    if [ ! -d ".git"  ]; then
-        echo -e "$gitLocal does NOT contain '.git'!"
-        echo -e "Needing:\n  1.'git init' and\n  2.'git remote add origin'"
-        git init
-        git remote add origin $gitRemote
-        #If there is any files,backup them or remove them.
-        p=`ls -a $gitLocal`
-        if [ ${#p} -lt 5 ];then
-            echo -e "$gitLocal is an empity DIR!But NOT a NULL DIR,it contains:\n[$p]!"
-        else
-            echo "You'd better to 'mv ./* ../backup/',here just 'rm -rf ./*'"
-            rm -rf ./*
-        fi
-
+    p=`ls -a`
+    echo -e "[$p]\n${#p}"
+    if test -d .git ;then
+        echo "Optional 'git branch -l', to see the branch list."
+        git branch -l
+        #git pull origin master
+        git pull
+    elif [ ${#p} -lt 5 ];then
+        git_init_pull
+    else
+        echo "There is other file(s),backup or remove."
+        backup
+        git_init_pull
     fi
-    echo "Optional 'git branch -l', to see the branch list."
-    git branch -l
-    echo "'git pull [master|dev|v0.1|v0.2|v1.0]...' from $gitRemote."
-    git pull origin master
-    # git pull --rebase
-    echo -e "change $gitLocal own rights to 'www:www'."
-    # echo -e "NOTICE: the 'git status' will change to 'modified' or 'delete'!"
+    echo -e "Change $gitLocal own rights to 'www:www'."
+    echo -e "NOTICE: the 'git status' will change to 'modified' or 'deleted'!"
     chown -R www:www $gitLocal > /dev/null 2>&1
     echo "--------------------End--------------------"
     exit
@@ -113,6 +135,8 @@ else
     echo "--------------------End--------------------"
     exit
 fi
+
+
 ```
 ## 3.File Operation
 
@@ -336,5 +360,6 @@ done
 
 echo "Pause $ipt(s), over,then start!"
 ```
+
 
 
