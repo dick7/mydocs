@@ -100,7 +100,90 @@ wget -O gitea https://dl.gitea.io/gitea/1.11.2/gitea-1.11.2-linux-amd64
 chmod +x gitea
 ./gitea web
 ```
-Like `frp`:go,anywhere,micro.
+
+***Like `frp`:go,anywhere,micro.***
+
+> **Browser install**
+
+```
+http://git.ztloadfield.com:3000/install
+```
+`cat custom/conf/app.ini`
+```
+APP_NAME = myGit-Gitea
+RUN_USER = root
+RUN_MODE = prod
+
+[oauth2]
+JWT_SECRET = ApXBvO0h3EWoo9ADmIbBTRJWONqy3WQhScbz8RUvEdw
+
+[security]
+INTERNAL_TOKEN = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE1ODQyODUyODV9.CqsITnL3jLyuTqJtPMQF7UXTo9HLlclR_1JIByeA2sU
+INSTALL_LOCK   = true
+SECRET_KEY     = N7vP6emXYrKNIsjKW1RWdWGP4MAPSyBcSIJveSPXqgjuL8IAlYCz9kFFSxqNMqci
+
+[database]
+DB_TYPE  = mysql
+HOST     = 127.0.0.1:3306
+NAME     = gitea
+USER     = gitea
+PASSWD   = p2YpCjdETsyyFeaY
+SSL_MODE = disable
+CHARSET  = utf8
+PATH     = /www/wwwroot/ftp/data/gitea.db
+
+[repository]
+ROOT = /www/wwwroot/gitea/gitea-repositories
+
+[server]
+SSH_DOMAIN       = git.ztloadfield.com
+DOMAIN           = git.ztloadfield.com
+HTTP_PORT        = 3000
+ROOT_URL         = http://git.ztloadfield.com:3000/
+DISABLE_SSH      = false
+SSH_PORT         = 22
+LFS_START_SERVER = true
+LFS_CONTENT_PATH = /www/wwwroot/gitea
+LFS_JWT_SECRET   = 7wRGQGjvUPoHD1gYepAUsWa4aol7uT8MrvGaHkBbl5Y
+OFFLINE_MODE     = false
+
+[mailer]
+ENABLED = false
+
+[service]
+REGISTER_EMAIL_CONFIRM            = false
+ENABLE_NOTIFY_MAIL                = false
+DISABLE_REGISTRATION              = false
+ALLOW_ONLY_EXTERNAL_REGISTRATION  = false
+ENABLE_CAPTCHA                    = false
+REQUIRE_SIGNIN_VIEW               = false
+DEFAULT_KEEP_EMAIL_PRIVATE        = false
+DEFAULT_ALLOW_CREATE_ORGANIZATION = true
+DEFAULT_ENABLE_TIMETRACKING       = true
+NO_REPLY_ADDRESS                  = noreply.localhost
+
+[picture]
+DISABLE_GRAVATAR        = false
+ENABLE_FEDERATED_AVATAR = true
+
+[openid]
+ENABLE_OPENID_SIGNIN = true
+ENABLE_OPENID_SIGNUP = true
+
+[session]
+PROVIDER = file
+
+[log]
+MODE      = file
+LEVEL     = info
+ROOT_PATH = /www/wwwroot/gitea/log
+```
+
+> ***Run gitea in bash***
+
+```
+GITEA_WORK_DIR=/var/lib/gitea/ /usr/local/bin/gitea web -c /etc/gitea/app.ini
+```
 
 ### 4.2.自己搭建一台 Git 服务器作为私有仓库
 
