@@ -91,7 +91,18 @@ Recent Deliveries
 
 ## 4.git server
 
-当然我们也可以自己搭建一台 Git 服务器作为私有仓库使用。
+### 4.1.gitea
+
+> [gitea](https://docs.gitea.io/en-us/install-from-binary/)
+
+```
+wget -O gitea https://dl.gitea.io/gitea/1.11.2/gitea-1.11.2-linux-amd64
+chmod +x gitea
+./gitea web
+```
+Like `frp`:go,anywhere,micro.
+
+### 4.2.自己搭建一台 Git 服务器作为私有仓库
 
 接下来我们将以 Centos 为例搭建 Git 服务器。
 
