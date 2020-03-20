@@ -74,4 +74,43 @@ touch newfile
 mkdir -p ./tmp/
 ```
 
+## 13.locate
+```
+locate mysql|xargs rm -rf
+updatedb
+```
 
+## 14.apt
+```
+apt install/autoremove jupyter
+```
+
+## 15.dpkg
+```
+dpkg -i A.deb # install
+dpkg -L # list debs
+dpkg -r/-P A.dep # remove/purge
+```
+
+## 16.pip
+```
+pip install/uninstall -r requirements.txt
+pip list
+pip freeze > requirements.txt
+```
+
+## 17.xargs
+```
+somecommand |xargs -item  command  ## 13.locate
+```
+
+## 18.set
+```
+set
+```
+
+## 19.export
+```
+export [-fnp][变量名称]=[变量设置值]
+export -p # present shell PARMETERS
+```
